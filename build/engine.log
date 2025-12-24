@@ -1,0 +1,14 @@
+[INFO] [Window] 2025-12-24 16:20:54 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:87 - Initializing window: Voxel Engine
+[INFO] [Window] 2025-12-24 16:20:55 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - OpenGL version: 4.1 Metal - 90.5
+[INFO] [Window] 2025-12-24 16:20:55 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:141 - Window initialized successfully
+[INFO] [Engine] 2025-12-24 16:20:59 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_B
+[INFO] [Engine] 2025-12-24 16:20:59 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_B
+[INFO] [Engine] 2025-12-24 16:20:59 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_B
+[INFO] [Engine] 2025-12-24 16:20:59 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_B
+[INFO] [Engine] 2025-12-24 16:21:01 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_A
+[INFO] [Engine] 2025-12-24 16:21:01 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_A
+[INFO] [Engine] 2025-12-24 16:21:18 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_A
+[INFO] [Engine] 2025-12-24 16:21:18 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_A
+[INFO] [Engine] 2025-12-24 16:21:18 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_A
+[INFO] [Engine] 2025-12-24 16:21:18 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_A
+[INFO] [Engine] 2025-12-24 16:21:18 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:141 - Selected: Cube_A

@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/core/Input.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/core/Input.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/core/Log.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/core/Log.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/core/Time.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/core/Time.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/main.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/main.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o.d"
+  "voxel_engine"
+  "voxel_engine.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/voxel_engine.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

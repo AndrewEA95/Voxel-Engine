@@ -1,0 +1,31 @@
+# Build artifacts
+build/
+bin/
+obj/
+*.o
+*.obj
+*.pdb
+*.ilk
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Visual Studio
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+.vs/
+
+# macOS junk
+.DS_Store
+
+# Logs
+*.log
+
+# External libraries (submodules will override this)
+extern/glfw/
+extern/glm/

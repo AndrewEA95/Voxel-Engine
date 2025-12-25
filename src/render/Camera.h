@@ -4,6 +4,12 @@
 #include "../../extern/glm-1.0.2/glm/glm.hpp"
 #include "../../extern/glm-1.0.2/glm/gtc/matrix_transform.hpp"
 
+enum class CameraMode
+{
+    FPS,
+    Editor
+};
+
 namespace Render 
 {
 
@@ -35,9 +41,27 @@ namespace Render
                 m_ViewportHeight = height;
             }
 
+            void setMode(CameraMode mode);
+            CameraMode getMode() const { return m_mode; }
+
+            void setPivot(const glm::vec3& pivot);
+            const glm::vec3& getPivot() const { return m_pivot;}
+
+            float getDistance() const { return m_distance; }
+            void setDistance(float dist);
+
+            void update(float dt);
+
+            glm::vec3 getForward() const;
+
         private:
+
+            CameraMode m_mode = CameraMode::FPS;    
+
             void updateDirectionVectors();
+            glm::vec3 m_pivot = glm::vec3(0.0f);
             glm::vec3 m_position {0.0f, 0.0f, 3.0f};
+            float m_distance = 10.0f;
             float m_yaw   = -90.0f;  // Facing -Z by default
             float m_pitch = 0.0f;
 
@@ -52,6 +76,9 @@ namespace Render
 
             float m_ViewportWidth = 1280.0f;
             float m_ViewportHeight = 720.0f;
+
+            void updateFPS(float dt);
+            void updateEditor(float dt);
     };
 
 }

@@ -27,6 +27,9 @@ namespace Core
             static bool isMouseButtonPressed(int button);
             static void setMouseButton(int button, bool down);
 
+            static float getScrollDelta();
+            static void setScrollDelta(float delta);
+
         private:
             static std::unordered_map<int, bool> s_keys;
             static std::unordered_map<int, bool> s_prevKeys;
@@ -36,6 +39,7 @@ namespace Core
 
             static float s_mouseX;
             static float s_mouseY;
+            static float s_scrollDelta;
 
             static std::unordered_map<int, bool> s_mouseButtons;
             static std::unordered_map<int, bool> s_prevMouseButtons;

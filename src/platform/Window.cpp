@@ -14,13 +14,6 @@ namespace Platform
     static double s_lastMouseY = 0.0;
     static bool s_firstMouse = true;
 
-    static std::function<void(float, float)> s_mouseCallback;
-
-    void Window::setMouseMoveCallback(std::function<void(float, float)> callback) 
-    {
-        s_mouseCallback = callback;
-    }
-
     static void GLFWMouseCallback(GLFWwindow* window, double xpos, double ypos) 
     {
         if (s_firstMouse) {
@@ -35,11 +28,10 @@ namespace Platform
         s_lastMouseX = xpos;
         s_lastMouseY = ypos;
 
-        // NEW: store absolute mouse position
         Core::Input::setMousePosition((float)xpos, (float)ypos);
 
-        if (s_mouseCallback)
-            s_mouseCallback(deltaX, deltaY);
+        
+        Core::Input::setMouseDelta(deltaX, deltaY);
     }
 
     static void GLFWErrorCallback(int error, const char* description) {
@@ -128,6 +120,11 @@ namespace Platform
             glfwTerminate();
             return false;
         }
+
+        glfwSetScrollCallback(m_window, [](GLFWwindow* win, double xoffset, double yoffset)
+        {
+            Core::Input::setScrollDelta((float)yoffset);
+        });
 
         glfwMakeContextCurrent(m_window);
         glfwSwapInterval(1);

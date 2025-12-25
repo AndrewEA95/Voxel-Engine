@@ -1056,5 +1056,6 @@ CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o: \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/Time.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../render/Render.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../render/Mesh.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../render/RenderObject.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../render/Transform.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../render/../scene/Scene.h

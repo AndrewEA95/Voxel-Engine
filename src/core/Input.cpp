@@ -22,6 +22,7 @@ namespace Core
         s_prevKeys = s_keys;
         s_mouseDX = 0.0f;
         s_mouseDY = 0.0f;
+        s_scrollDelta = 0.0f;
 
     }
 
@@ -79,5 +80,14 @@ namespace Core
     {
         s_prevMouseButtons[button] = s_mouseButtons[button];
         s_mouseButtons[button] = down;
+    }
+
+    float Input::s_scrollDelta = 0.0f;
+
+    float Input::getScrollDelta() { return s_scrollDelta; }
+
+    void Input::setScrollDelta(float delta)
+    {
+        s_scrollDelta = delta;
     }
 }

@@ -976,6 +976,7 @@ CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o: \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/VertexArray.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/VertexBuffer.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/IndexBuffer.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/RenderObject.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Transform.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glm-1.0.2/glm/gtc/matrix_transform.hpp \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glm-1.0.2/glm/gtc/../mat4x4.hpp \
@@ -1001,11 +1002,8 @@ CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o: \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glm-1.0.2/glm/gtc/../geometric.hpp \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glm-1.0.2/glm/gtc/../trigonometric.hpp \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glm-1.0.2/glm/gtc/../matrix.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../ecs/Entity.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../scene/Scene.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../scene/../render/RenderObject.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../scene/../render/../../extern/glm-1.0.2/glm/glm.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../scene/../render/Mesh.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../scene/../render/Transform.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../scene/../render/../ecs/Entity.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glad/include/glad/glad.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glad/include/glad/../KHR/khrplatform.h

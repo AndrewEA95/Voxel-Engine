@@ -20,13 +20,6 @@ namespace Core
 
         Render::Renderer::init();  // now BEFORE Game is constructed
 
-        m_window.setMouseMoveCallback([this](float dx, float dy) 
-        {
-            m_camera.processMouseMovement(dx, dy);
-            LOG_ENGINE_TRACE("Mouse dx: " + std::to_string(dx) +
-                             " dy: " + std::to_string(dy));
-        });
-
         m_game = std::make_unique<Game>();  // Game sees a valid test mesh now
     }
 
@@ -42,16 +35,21 @@ namespace Core
         while (!m_window.shouldClose())
         {
             Time::update();
-            Core::Input::update();
+
+            // 1. Gather input events from OS / GLFW
             m_window.pollEvents();
 
             Render::Renderer::beginFrame();
 
+            // 2. Use input this frame
             m_game->onUpdate(Time::deltaTime(), m_camera, m_window);
             m_game->onRender(m_camera, Time::deltaTime());
 
             Render::Renderer::endFrame();
             m_window.swapBuffers();
+
+            // 3. Commit input state for next frame
+            Core::Input::update();
         }
     }
 }

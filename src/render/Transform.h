@@ -63,6 +63,12 @@ namespace Render
             return m_WorldMatrix;
         }
 
+        glm::vec3 getWorldPosition() const
+    {
+        glm::mat4 world = getWorldMatrix();
+        return glm::vec3(world[3]); // extract translation
+    }
+
     private:
         glm::vec3 position;
         glm::vec3 rotation; // Euler angles in radians

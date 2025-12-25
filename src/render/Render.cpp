@@ -1,4 +1,6 @@
 #define GL_SILENCE_DEPRECATION
+#include <OpenGL/gl.h>
+
 
 #include "Transform.h"
 
@@ -8,8 +10,6 @@
 #include "../scene/Scene.h"
 #include "Mesh.h"
 #include "VertexBuffer.h"
-
-#include "../../extern/glad/include/glad/glad.h"
 
 namespace Render
 {
@@ -139,29 +139,25 @@ namespace Render
             glEnable(GL_DEPTH_TEST);
             glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         }
-
-        if (selectedEntity != ECS::INVALID_ENTITY)
-        {
-            const auto& obj = scene.getObjectByEntity(selectedEntity);
-
-            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-            glDisable(GL_DEPTH_TEST);
-
-            s_TestShader->bind();
-            s_TestShader->setUniformVec3("u_Color", glm::vec3(1.0f, 1.0f, 0.0f)); // yellow
-            s_TestShader->setUniformMat4("u_Model", obj.transform.getWorldMatrix());
-            s_TestShader->setUniformMat4("u_ViewProj", viewProj);
-
-            obj.mesh->draw();
-
-            glEnable(GL_DEPTH_TEST);
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        }
     }
 
     Mesh* Renderer::getTestMesh()
     {
         return s_TestMesh;
+    }
+
+    void Renderer::drawObject(const RenderObject& obj, const glm::mat4& viewProj)
+    {
+        s_TestShader->bind();
+
+        // Use ECS/world transform like drawMesh does
+        glm::mat4 model = obj.transform.getWorldMatrix();
+
+        s_TestShader->setUniformMat4("u_ViewProj", viewProj);
+        s_TestShader->setUniformMat4("u_Model", model);
+        s_TestShader->setUniformVec3("u_Color", obj.color);
+
+        obj.mesh->draw();
     }
 
 } // namespace Render

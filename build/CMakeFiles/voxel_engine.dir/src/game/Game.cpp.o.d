@@ -1058,6 +1058,7 @@ CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/signal.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/../render/Render.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/../render/Mesh.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/../render/RenderObject.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/../render/Transform.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/../render/../scene/Scene.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/../ecs/Components.h \

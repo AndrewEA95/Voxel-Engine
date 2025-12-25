@@ -98,7 +98,7 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
         window.setCursorLocked(cursorLocked);
     }
 
-    camera.processKeyboard(dt);
+    camera.update(dt);
 
     // Left click to pick
     if (Core::Input::isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT))
@@ -133,12 +133,55 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
             }
         }
 
+        static double lastClickTime = 0.0;
+        double now = glfwGetTime();
+
+        bool doubleClick = false;
+
+        if (Core::Input::isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT))
+        {
+            if (now - lastClickTime < 0.25) // 250ms double-click window
+                doubleClick = true;
+
+            lastClickTime = now;
+        }
+
+        if (doubleClick && hit != ECS::INVALID_ENTITY)
+        {
+            auto& tc = m_Registry.getComponent<ECS::TransformComponent>(hit).transform;
+            glm::vec3 pos = tc.getWorldPosition();
+
+            camera.setPivot(pos);
+            camera.setDistance(5.0f); // zoom in close
+        }
+
         m_selected = hit;
 
         if (hit != ECS::INVALID_ENTITY)
         {
             auto& tag = m_Registry.getComponent<ECS::TagComponent>(hit);
             LOG_ENGINE_INFO("Selected: " + tag.name);
+
+            // New: move camera pivot to selected object
+            auto& tc = m_Registry.getComponent<ECS::TransformComponent>(hit).transform;
+            glm::vec3 worldPos = tc.getWorldPosition(); // or extract from world matrix
+            camera.setPivot(worldPos);
+        }
+    }
+
+    if (Core::Input::isKeyPressed(GLFW_KEY_TAB))
+    {
+        if (camera.getMode() == CameraMode::FPS)
+        {
+            camera.setMode(CameraMode::Editor);
+            window.setCursorLocked(false);
+            LOG_ENGINE_INFO("Switched to EDITOR mode");
+        }
+        else
+        {
+            camera.setMode(CameraMode::FPS);
+            window.setCursorLocked(true);
+            LOG_ENGINE_INFO("Switched to FPS mode");
         }
     }
 
@@ -220,5 +263,29 @@ void Game::onRender(const Render::Camera& camera, float dt)
     glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
+    // Draw world
     Render::Renderer::drawScene(m_Scene, camera.getViewProjectionMatrix(), m_selected);
+
+    // Draw crosshair only in FPS mode
+    if (camera.getMode() == CameraMode::FPS)
+    {
+        // Create a tiny cube a bit in front of the camera
+        Render::RenderObject crosshair;
+        crosshair.mesh   = Render::Renderer::getTestMesh();
+        crosshair.color  = glm::vec3(1.0f, 1.0f, 1.0f);
+        crosshair.isStatic = true;      // it doesn't animate
+        crosshair.entity   = ECS::INVALID_ENTITY; // not part of ECS
+
+        glm::vec3 camPos = camera.getPosition();
+        glm::vec3 camFwd = camera.getForward();
+
+        glm::mat4 t = glm::mat4(1.0f);
+        t = glm::translate(t, camPos + camFwd * 1.5f);        // 1.5 units in front
+        t = glm::scale(t, glm::vec3(0.03f));                  // very small
+
+        crosshair.transform.setWorldMatrix(t);
+
+        // Draw just this object with same VP
+        Render::Renderer::drawObject(crosshair, camera.getViewProjectionMatrix());
+    }
 }

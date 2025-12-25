@@ -2,6 +2,7 @@
 
 #include "../../extern/glm-1.0.2/glm/glm.hpp"
 #include "Mesh.h"
+#include "RenderObject.h"
 #include "Transform.h"
 #include "../scene/Scene.h"
 
@@ -24,5 +25,8 @@ namespace Render
 
             static void drawTestTriangle(const glm::mat4& viewProj, float dt);
             static void drawMesh(const Mesh& mesh, const Transform& transform, const glm::mat4& viewProj);
-            static void drawScene(const Scene& scene, const glm::mat4& viewProj, ECS::Entity selectedEntity);    };
+            static void drawScene(const Scene& scene, const glm::mat4& viewProj, ECS::Entity selectedEntity);
+
+            static void drawObject(const RenderObject& obj, const glm::mat4& viewProj);
+    };
 }

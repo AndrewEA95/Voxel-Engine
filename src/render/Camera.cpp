@@ -17,6 +17,114 @@ namespace Render
         m_far(farPlane)
     {}
 
+    void Camera::update(float dt)
+    {
+        if (m_mode == CameraMode::FPS)
+            updateFPS(dt);
+        else
+            updateEditor(dt);
+    }
+
+    void Camera::updateFPS(float dt)
+    {
+        // Mouse look
+        float dx = Core::Input::mouseDeltaX();
+        float dy = Core::Input::mouseDeltaY();
+
+        const float sensitivity = 0.1f;
+
+        m_yaw   += dx * sensitivity;
+        m_pitch += dy * sensitivity;
+
+        m_pitch = glm::clamp(m_pitch, -89.0f, 89.0f);
+
+        // Movement
+        glm::vec3 forward = getForward();
+        glm::vec3 right   = glm::normalize(glm::cross(forward, glm::vec3(0,1,0)));
+
+        const float speed = 10.0f;   // <-- THIS is the missing variable
+
+        // Horizontal movement
+        if (Core::Input::isKeyDown(GLFW_KEY_W)) m_position += forward * speed * dt;
+        if (Core::Input::isKeyDown(GLFW_KEY_S)) m_position -= forward * speed * dt;
+        if (Core::Input::isKeyDown(GLFW_KEY_A)) m_position -= right   * speed * dt;
+        if (Core::Input::isKeyDown(GLFW_KEY_D)) m_position += right   * speed * dt;
+
+        // Vertical movement (fly mode)
+        if (Core::Input::isKeyDown(GLFW_KEY_SPACE))
+            m_position.y += speed * dt;
+
+        if (Core::Input::isKeyDown(GLFW_KEY_LEFT_CONTROL))
+            m_position.y -= speed * dt;
+    }
+
+    void Camera::updateEditor(float dt)
+    {
+        // --- ORBIT (RMB) ---
+        if (Core::Input::isMouseButtonPressed(GLFW_MOUSE_BUTTON_RIGHT))
+        {
+            float dx = Core::Input::mouseDeltaX();
+            float dy = Core::Input::mouseDeltaY();
+
+            float orbitSpeed = 0.2f;
+
+            // Hold Shift to orbit faster
+            if (Core::Input::isKeyDown(GLFW_KEY_LEFT_SHIFT))
+                orbitSpeed *= 3.0f;
+
+            m_yaw   += dx * orbitSpeed;
+            m_pitch -= dy * orbitSpeed;
+
+            m_pitch = glm::clamp(m_pitch, -89.0f, 89.0f);
+        }
+
+        // --- PAN (MMB) ---
+        if (Core::Input::isMouseButtonPressed(GLFW_MOUSE_BUTTON_MIDDLE))
+        {
+            float dx = Core::Input::mouseDeltaX();
+            float dy = Core::Input::mouseDeltaY();
+
+            float panSpeed = 0.01f * m_distance;
+
+            // Hold Shift to pan faster
+            if (Core::Input::isKeyDown(GLFW_KEY_LEFT_SHIFT))
+                panSpeed *= 3.0f;
+
+            glm::vec3 forward = getForward();
+            glm::vec3 right   = glm::normalize(glm::cross(forward, glm::vec3(0, 1, 0)));
+            glm::vec3 up      = glm::vec3(0, 1, 0);
+
+            m_pivot += (-right * dx * panSpeed) + (up * dy * panSpeed);
+        }
+
+        // --- ZOOM (Q/E) ---
+        const float zoomSpeed = 10.0f;
+
+        if (Core::Input::isKeyDown(GLFW_KEY_Q))
+            m_distance += zoomSpeed * dt;
+        if (Core::Input::isKeyDown(GLFW_KEY_E))
+            m_distance -= zoomSpeed * dt;
+
+        m_distance = glm::clamp(m_distance, 1.0f, 200.0f);
+
+        float scroll = Core::Input::getScrollDelta(); // You’ll add this in Input
+        if (scroll != 0.0f)
+        {
+            m_distance -= scroll * 1.5f; // adjust sensitivity
+            m_distance = glm::clamp(m_distance, 1.0f, 200.0f);
+        }
+
+        // --- UPDATE POSITION FROM ORBIT ---
+        glm::vec3 dir;
+        dir.x = cos(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
+        dir.y = sin(glm::radians(m_pitch));
+        dir.z = sin(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
+        dir = glm::normalize(dir);
+
+        // Camera sits at pivot - forward * distance
+        m_position = m_pivot - dir * m_distance;
+    }
+
     void Camera::setPosition(const glm::vec3& pos)
     {
         m_position = pos;
@@ -26,6 +134,21 @@ namespace Render
     {
         m_yaw = yawDegrees;
         m_pitch = pitchDegrees;
+    }
+
+    void Camera::setMode(CameraMode mode)
+    {
+        m_mode = mode;
+    }
+
+    void Camera::setPivot(const glm::vec3& pivot)
+    {
+        m_pivot = pivot;
+    }
+
+    void Camera::setDistance(float dist)
+    {
+        m_distance = glm::clamp(dist, 1.0f, 200.0f);
     }
 
     void Camera::processMouseMovement(float deltaX, float deltaY)
@@ -133,5 +256,14 @@ namespace Render
         glm::vec3 worldDir = glm::normalize(glm::vec3(invView * eye));
 
         return Ray{ m_position, worldDir };
+    }
+
+    glm::vec3 Camera::getForward() const
+    {
+        glm::vec3 forward;
+        forward.x = cos(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
+        forward.y = sin(glm::radians(m_pitch));
+        forward.z = sin(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
+        return glm::normalize(forward);
     }
 }

@@ -1,13 +1,5 @@
-[INFO] [Window] 2025-12-24 21:57:37 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - Initializing window: Voxel Engine
-[INFO] [Window] 2025-12-24 21:57:38 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:71 - OpenGL version: 4.1 Metal - 90.5
-[INFO] [Window] 2025-12-24 21:57:38 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:138 - Window initialized successfully
-[INFO] [Engine] 2025-12-24 21:57:44 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Chunk_0_0_0
-[INFO] [Engine] 2025-12-24 21:57:50 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Cube_A
-[INFO] [Engine] 2025-12-24 21:57:50 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Cube_A
-[INFO] [Engine] 2025-12-24 21:57:50 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Cube_A
-[INFO] [Engine] 2025-12-24 21:57:50 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Cube_A
-[INFO] [Engine] 2025-12-24 21:57:50 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Cube_A
-[INFO] [Engine] 2025-12-24 21:57:50 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Cube_A
-[INFO] [Engine] 2025-12-24 21:57:50 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Cube_A
-[INFO] [Engine] 2025-12-24 21:57:50 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Selected: Cube_A
-[INFO] [Engine] 2025-12-24 21:57:58 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:178 - Switched to EDITOR mode
+[INFO] [Window] 2025-12-25 20:54:26 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - Initializing window: Voxel Engine
+[INFO] [Window] 2025-12-25 20:54:26 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:71 - OpenGL version: 4.1 Metal - 90.5
+[INFO] [Window] 2025-12-25 20:54:26 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:138 - Window initialized successfully
+[INFO] [Engine] 2025-12-25 20:55:00 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:182 - Switched to EDITOR mode
+[INFO] [Engine] 2025-12-25 20:55:07 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp:188 - Switched to FPS mode

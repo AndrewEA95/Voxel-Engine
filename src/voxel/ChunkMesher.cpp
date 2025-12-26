@@ -1,114 +1,197 @@
 #include "ChunkMesher.h"
 #include "Chunk.h"
-#include "Voxel.h"
+#include "../core/ChunkManager.h"
+#include "../render/Mesh.h"
+#include "../render/VertexBuffer.h"
+#include "../render/Render.h"
+#include <iostream>
 
-#include "../../extern/glm-1.0.2/glm/glm.hpp"
+#include <vector>
 
-using namespace Render;
-
-// Correct vertex positions for each face (4 verts per face)
-static const glm::vec3 FACE_VERTS[6][4] =
+// ------------------------------------------------------------
+// Helper: is voxel solid?
+// ------------------------------------------------------------
+static inline bool isSolid(const Chunk& chunk, int x, int y, int z)
 {
-    // +X
-    { {1,0,0}, {1,1,0}, {1,1,1}, {1,0,1} },
+    if (x < 0 || x >= Chunk::SIZE ||
+        y < 0 || y >= Chunk::SIZE ||
+        z < 0 || z >= Chunk::SIZE)
+        return false; // out of bounds = air (for now)
 
-    // -X
-    { {0,0,1}, {0,1,1}, {0,1,0}, {0,0,0} },
+    return chunk.get(x, y, z).type != 0;
+}
 
-    // +Y
-    { {0,1,1}, {1,1,1}, {1,1,0}, {0,1,0} },
-
-    // -Y
-    { {0,0,0}, {1,0,0}, {1,0,1}, {0,0,1} },
-
-    // +Z
-    { {0,0,1}, {1,0,1}, {1,1,1}, {0,1,1} },
-
-    // -Z
-    { {0,1,0}, {1,1,0}, {1,0,0}, {0,0,0} }
-};
-
-// Neighbor offsets for each face
-static const glm::ivec3 NEIGHBOR_OFFSETS[6] =
+// ------------------------------------------------------------
+// Helper: is a face exposed relative to neighbor
+// ------------------------------------------------------------
+static inline bool isFaceExposed(const Chunk& chunk,
+                                 int x, int y, int z,
+                                 int nx, int ny, int nz)
 {
-    { 1, 0, 0 },   // +X
-    {-1, 0, 0 },   // -X
-    { 0, 1, 0 },   // +Y
-    { 0,-1, 0 },   // -Y
-    { 0, 0, 1 },   // +Z
-    { 0, 0,-1 }    // -Z
-};
+    // Face exists only if voxel is solid AND neighbor is air
+    return isSolid(chunk, x, y, z) && !isSolid(chunk, nx, ny, nz);
+}
 
-RenderObject ChunkMesher::buildMesh(const Chunk& chunk)
+// ------------------------------------------------------------
+// Add a quad (two triangles) to buffers
+// ------------------------------------------------------------
+static void addQuad(
+    std::vector<float>& vertices,
+    std::vector<uint32_t>& indices,
+    const glm::vec3& origin,
+    const glm::vec3& u,
+    const glm::vec3& v,
+    const glm::vec3& color)
 {
+    uint32_t startIndex = (uint32_t)(vertices.size() / 6);
+
+    glm::vec3 p0 = origin;
+    glm::vec3 p1 = origin + u;
+    glm::vec3 p2 = origin + v;
+    glm::vec3 p3 = origin + u + v;
+
+    auto push = [&](const glm::vec3& p)
+    {
+        vertices.push_back(p.x);
+        vertices.push_back(p.y);
+        vertices.push_back(p.z);
+
+        vertices.push_back(color.r);
+        vertices.push_back(color.g);
+        vertices.push_back(color.b);
+    };
+    push(p0);
+    push(p1);
+    push(p2);
+    push(p3);
+
+    std::cout << "Quad emitted: origin=(" << origin.x << "," << origin.y << "," << origin.z
+          << ") u=(" << u.x << "," << u.y << "," << u.z
+          << ") v=(" << v.x << "," << v.y << "," << v.z << ")\n";
+
+    indices.push_back(startIndex + 0);
+    indices.push_back(startIndex + 1);
+    indices.push_back(startIndex + 2);
+
+    indices.push_back(startIndex + 2);
+    indices.push_back(startIndex + 1);
+    indices.push_back(startIndex + 3);
+}
+
+// ------------------------------------------------------------
+// Greedy meshing for a single face direction (local to chunk)
+// nx, ny, nz is the normal direction of the faces we emit
+// ------------------------------------------------------------
+static void greedyMeshDirection(
+    const Chunk& chunk,
+    std::vector<float>& vertices,
+    std::vector<uint32_t>& indices,
+    int nx, int ny, int nz) // face normal direction
+{
+    const int X = Chunk::SIZE;
+    const int Y = Chunk::SIZE;
+    const int Z = Chunk::SIZE;
+
+    for (int x = 0; x < X; x++)
+    for (int y = 0; y < Y; y++)
+    for (int z = 0; z < Z; z++)
+    {
+        int nxp = x + nx;
+        int nyp = y + ny;
+        int nzp = z + nz;
+
+        if (!isFaceExposed(chunk, x, y, z, nxp, nyp, nzp))
+            continue;
+
+        glm::vec3 origin;
+        glm::vec3 uVec(0.0f);
+        glm::vec3 vVec(0.0f);
+
+        // Choose orientation and origin based on face normal
+        if (nx == 1 && ny == 0 && nz == 0) // +X
+        {
+            origin = glm::vec3(x + 1, y, z);
+            uVec   = glm::vec3(0, 1, 0); // Y
+            vVec   = glm::vec3(0, 0, 1); // Z
+        }
+        else if (nx == -1 && ny == 0 && nz == 0) // -X
+        {
+            origin = glm::vec3(x, y, z);
+            uVec   = glm::vec3(0, 1, 0); // Y
+            vVec   = glm::vec3(0, 0, 1); // Z
+        }
+        else if (nx == 0 && ny == 1 && nz == 0) // +Y
+        {
+            origin = glm::vec3(x, y + 1, z);
+            uVec   = glm::vec3(1, 0, 0); // X
+            vVec   = glm::vec3(0, 0, 1); // Z
+        }
+        else if (nx == 0 && ny == -1 && nz == 0) // -Y
+        {
+            origin = glm::vec3(x, y, z);
+            uVec   = glm::vec3(1, 0, 0); // X
+            vVec   = glm::vec3(0, 0, 1); // Z
+        }
+        else if (nx == 0 && ny == 0 && nz == 1) // +Z
+        {
+            origin = glm::vec3(x, y, z + 1);
+            uVec   = glm::vec3(1, 0, 0); // X
+            vVec   = glm::vec3(0, 1, 0); // Y
+        }
+        else if (nx == 0 && ny == 0 && nz == -1) // -Z
+        {
+            origin = glm::vec3(x, y, z);
+            uVec   = glm::vec3(1, 0, 0); // X
+            vVec   = glm::vec3(0, 1, 0); // Y
+        }
+        else
+        {
+            continue; // should never hit
+        }
+
+        // Face color by normal for debugging
+        glm::vec3 color;
+        if (nx == 1)      color = glm::vec3(1, 0, 0);   // +X red
+        else if (nx == -1) color = glm::vec3(0.6f, 0, 0);
+        else if (ny == 1)  color = glm::vec3(0, 1, 0);   // +Y green
+        else if (ny == -1) color = glm::vec3(0, 0.6f, 0);
+        else if (nz == 1)  color = glm::vec3(0, 0, 1);   // +Z blue
+        else               color = glm::vec3(0, 0, 0.6f);
+
+        addQuad(vertices, indices, origin, uVec, vVec, color);
+    }
+}
+
+// ------------------------------------------------------------
+// Build full greedy mesh for chunk
+// ------------------------------------------------------------
+Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk, const ChunkManager& manager)
+{
+    (void)manager; // not used yet (reserved for future neighbor-aware version)
+
     std::vector<float> vertices;
     std::vector<uint32_t> indices;
 
-    uint32_t indexOffset = 0;
+    vertices.reserve(10000);
+    indices.reserve(20000);
 
-    for (int x = 0; x < Chunk::SIZE; x++)
-    for (int y = 0; y < Chunk::SIZE; y++)
-    for (int z = 0; z < Chunk::SIZE; z++)
-    {
-        const Voxel& voxel = chunk.get(x, y, z);
-        if (voxel.type == 0)
-            continue; // skip air
+    // 6 directions: ±X, ±Y, ±Z
+    greedyMeshDirection(chunk, vertices, indices, +1, 0, 0); // +X
+    greedyMeshDirection(chunk, vertices, indices, -1, 0, 0); // -X
+    greedyMeshDirection(chunk, vertices, indices, 0, +1, 0); // +Y
+    greedyMeshDirection(chunk, vertices, indices, 0, -1, 0); // -Y
+    greedyMeshDirection(chunk, vertices, indices, 0, 0, +1); // +Z
+    greedyMeshDirection(chunk, vertices, indices, 0, 0, -1); // -Z
 
-        glm::vec3 basePos = glm::vec3(x, y, z);
-
-        // Check all 6 faces
-        for (int face = 0; face < 6; face++)
-        {
-            glm::ivec3 n = NEIGHBOR_OFFSETS[face];
-            int nx = x + n.x;
-            int ny = y + n.y;
-            int nz = z + n.z;
-
-            bool neighborSolid = false;
-
-            // Check if neighbor is inside chunk
-            if (nx >= 0 && nx < Chunk::SIZE &&
-                ny >= 0 && ny < Chunk::SIZE &&
-                nz >= 0 && nz < Chunk::SIZE)
-            {
-                neighborSolid = (chunk.get(nx, ny, nz).type != 0);
-            }
-
-            if (neighborSolid)
-                continue; // face hidden
-
-            // Add the 4 vertices for this face
-            for (int i = 0; i < 4; i++)
-            {
-                glm::vec3 v = basePos + FACE_VERTS[face][i];
-                vertices.push_back(v.x);
-                vertices.push_back(v.y);
-                vertices.push_back(v.z);
-            }
-
-            // Add indices for two triangles
-            indices.push_back(indexOffset + 0);
-            indices.push_back(indexOffset + 1);
-            indices.push_back(indexOffset + 2);
-            indices.push_back(indexOffset + 2);
-            indices.push_back(indexOffset + 3);
-            indices.push_back(indexOffset + 0);
-
-            indexOffset += 4;
-        }
-    }
-
-    // Build Mesh
-    BufferLayout layout = {
-        { ShaderDataType::Float3, "a_Position" }
+    Render::BufferLayout layout = {
+        { Render::ShaderDataType::Float3, "a_Position" },
+        { Render::ShaderDataType::Float3, "a_Color" }
     };
 
-    Mesh* mesh = new Mesh(vertices, indices, layout);
+    Render::Mesh* mesh = new Render::Mesh(vertices, indices, layout);
 
-    RenderObject obj;
-    obj.mesh = mesh;
-    obj.color = glm::vec3(0.8f, 0.8f, 0.8f);
-    obj.transform.setPosition(glm::vec3(chunk.getWorldPosition()));
+    Render::RenderObject obj(mesh, glm::vec3(0.6f, 0.8f, 0.9f));
+    obj.transform.setPosition(chunk.getWorldPosition()); // local positions + chunk transform
 
     return obj;
 }

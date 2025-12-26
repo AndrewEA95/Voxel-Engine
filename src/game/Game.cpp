@@ -15,6 +15,7 @@
 #include <OpenGL/gl.h>
 
 Game::Game()
+    : m_chunkManager(m_Scene)
 {
     // --- Chunk entity ---
     ECS::Entity chunkEntity = m_Registry.createEntity();
@@ -30,7 +31,7 @@ Game::Game()
     Chunk chunk({0,0,0});
     chunk.generateTestData();
 
-    Render::RenderObject chunkObj = ChunkMesher::buildMesh(chunk);
+    Render::RenderObject chunkObj = ChunkMesher::buildMesh(chunk, m_chunkManager);
     chunkObj.isStatic = true;
     chunkObj.entity = chunkEntity;        // ECS -> Scene mapping
     m_Scene.addObject(chunkObj);
@@ -154,6 +155,9 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
             camera.setPivot(pos);
             camera.setDistance(5.0f); // zoom in close
         }
+
+        // Update chunk streaming
+        m_chunkManager.update(camera.getPosition());
 
         m_selected = hit;
 

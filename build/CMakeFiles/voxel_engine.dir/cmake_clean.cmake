@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.o"
   "CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o.d"
   "CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o"
   "CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o.d"
   "CMakeFiles/voxel_engine.dir/src/core/Input.cpp.o"

@@ -153,10 +153,24 @@ CMakeFiles/voxel_engine.dir/src/core/Input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/voxel_engine.dir/src/core/Input.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/Input.cpp -o CMakeFiles/voxel_engine.dir/src/core/Input.cpp.s
 
+CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
+CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/ChunkManager.cpp
+CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o -MF CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/ChunkManager.cpp
+
+CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/ChunkManager.cpp > CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.i
+
+CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/ChunkManager.cpp -o CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.s
+
 CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp
 CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o -MF CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/game/Game.cpp
 
 CMakeFiles/voxel_engine.dir/src/game/Game.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/voxel_engine.dir/src/game/Game.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp
 CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o -MF CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp
 
 CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Camera.cpp
 CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o -MF CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Camera.cpp
 
 CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Render.cpp
 CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o -MF CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/render/Render.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Render.cpp
 
 CMakeFiles/voxel_engine.dir/src/render/Render.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/voxel_engine.dir/src/render/Render.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Shader.cpp
 CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o -MF CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Shader.cpp
 
 CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/voxel_engine.dir/src/render/Shader.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/IndexBuffer.cpp
 CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o -MF CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/IndexBuffer.cpp
 
 CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Mesh.cpp
 CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o -MF CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/Mesh.cpp
 
 CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/voxel_engine.dir/src/render/Mesh.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/VertexArray.cpp
 CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o -MF CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/VertexArray.cpp
 
 CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/voxel_engine.dir/src/render/VertexArray.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/VertexBuffer.cpp
 CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o -MF CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/VertexBuffer.cpp
 
 CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/voxel_engine.dir/src/render/VertexBuffer.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/Chunk.cpp
 CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o -MF CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/Chunk.cpp
 
 CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.s: cmake_force
 CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o: CMakeFiles/voxel_engine.dir/flags.make
 CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/ChunkMesher.cpp
 CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o: CMakeFiles/voxel_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o -MF CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o.d -o CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/ChunkMesher.cpp
 
 CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.i: cmake_force
@@ -315,6 +329,7 @@ voxel_engine_OBJECTS = \
 "CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o" \
 "CMakeFiles/voxel_engine.dir/src/core/Time.cpp.o" \
 "CMakeFiles/voxel_engine.dir/src/core/Input.cpp.o" \
+"CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o" \
 "CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o" \
 "CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o" \
 "CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o" \
@@ -336,6 +351,7 @@ voxel_engine: CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.o
 voxel_engine: CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o
 voxel_engine: CMakeFiles/voxel_engine.dir/src/core/Time.cpp.o
 voxel_engine: CMakeFiles/voxel_engine.dir/src/core/Input.cpp.o
+voxel_engine: CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o
 voxel_engine: CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o
 voxel_engine: CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o
 voxel_engine: CMakeFiles/voxel_engine.dir/src/render/Camera.cpp.o
@@ -352,7 +368,7 @@ voxel_engine: libglad.a
 voxel_engine: extern/glfw/src/libglfw3.a
 voxel_engine: extern/glm-1.0.2/glm/libglm.a
 voxel_engine: CMakeFiles/voxel_engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable voxel_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable voxel_engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/voxel_engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

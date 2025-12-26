@@ -118,7 +118,7 @@ namespace Render
         for(auto& obj : scene.getObjects())
         {
             s_TestShader->bind();
-            s_TestShader->setUniformVec3("u_Color", obj.color);
+            //s_TestShader->setUniformVec3("u_Color", obj.color);
             drawMesh(*obj.mesh, obj.transform, viewProj);
         }
 
@@ -155,7 +155,7 @@ namespace Render
 
         s_TestShader->setUniformMat4("u_ViewProj", viewProj);
         s_TestShader->setUniformMat4("u_Model", model);
-        s_TestShader->setUniformVec3("u_Color", obj.color);
+        //s_TestShader->setUniformVec3("u_Color", obj.color);
 
         obj.mesh->draw();
     }

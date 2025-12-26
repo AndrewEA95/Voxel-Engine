@@ -29,6 +29,7 @@ add_executable(voxel_engine
     src/core/Engine.cpp
     src/core/Time.cpp
     src/core/Input.cpp
+    src/core/ChunkManager.cpp
     src/game/Game.cpp
     src/platform/Window.cpp
     src/render/Camera.cpp

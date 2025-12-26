@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/CLI.cpp" "CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.o" "gcc" "CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.o.d"
+  "/Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/ChunkManager.cpp" "CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o" "gcc" "CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o.d"
   "/Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/Engine.cpp" "CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o" "gcc" "CMakeFiles/voxel_engine.dir/src/core/Engine.cpp.o.d"
   "/Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/Input.cpp" "CMakeFiles/voxel_engine.dir/src/core/Input.cpp.o" "gcc" "CMakeFiles/voxel_engine.dir/src/core/Input.cpp.o.d"
   "/Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/Log.cpp" "CMakeFiles/voxel_engine.dir/src/core/Log.cpp.o" "gcc" "CMakeFiles/voxel_engine.dir/src/core/Log.cpp.o.d"

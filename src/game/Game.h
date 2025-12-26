@@ -3,6 +3,7 @@
 #include "../platform/Window.h"
 #include "../scene/Scene.h"
 #include "../ecs/Registry.h"
+#include "../core/ChunkManager.h"
 
 
 class Game 
@@ -17,4 +18,5 @@ class Game
     private:
         ECS::Registry m_Registry;
         Scene m_Scene;
+        ChunkManager m_chunkManager;
 };

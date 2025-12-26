@@ -287,6 +287,30 @@ src/core/CLI.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/voxel_engine.dir/build.make CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.s
 .PHONY : src/core/CLI.cpp.s
 
+src/core/ChunkManager.o: src/core/ChunkManager.cpp.o
+.PHONY : src/core/ChunkManager.o
+
+# target to build an object file
+src/core/ChunkManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/voxel_engine.dir/build.make CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.o
+.PHONY : src/core/ChunkManager.cpp.o
+
+src/core/ChunkManager.i: src/core/ChunkManager.cpp.i
+.PHONY : src/core/ChunkManager.i
+
+# target to preprocess a source file
+src/core/ChunkManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/voxel_engine.dir/build.make CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.i
+.PHONY : src/core/ChunkManager.cpp.i
+
+src/core/ChunkManager.s: src/core/ChunkManager.cpp.s
+.PHONY : src/core/ChunkManager.s
+
+# target to generate assembly for a file
+src/core/ChunkManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/voxel_engine.dir/build.make CMakeFiles/voxel_engine.dir/src/core/ChunkManager.cpp.s
+.PHONY : src/core/ChunkManager.cpp.s
+
 src/core/Engine.o: src/core/Engine.cpp.o
 .PHONY : src/core/Engine.o
 
@@ -695,6 +719,9 @@ help:
 	@echo "... src/core/CLI.o"
 	@echo "... src/core/CLI.i"
 	@echo "... src/core/CLI.s"
+	@echo "... src/core/ChunkManager.o"
+	@echo "... src/core/ChunkManager.i"
+	@echo "... src/core/ChunkManager.s"
 	@echo "... src/core/Engine.o"
 	@echo "... src/core/Engine.i"
 	@echo "... src/core/Engine.s"

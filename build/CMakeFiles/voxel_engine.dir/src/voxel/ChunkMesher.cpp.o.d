@@ -974,35 +974,61 @@ CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o: \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../../extern/glm-1.0.2/glm/vector_relational.hpp \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../../extern/glm-1.0.2/glm/integer.hpp \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../../extern/glm-1.0.2/glm/detail/func_integer.inl \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/ChunkManager.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../voxel/Chunk.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/Scene.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/RenderObject.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/glm.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/Mesh.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/VertexArray.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/VertexBuffer.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/IndexBuffer.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/Transform.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/matrix_transform.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../mat4x4.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../vec2.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../vec3.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../vec4.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_projection.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/constants.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/../ext/scalar_constants.inl \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/constants.inl \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../geometric.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../trigonometric.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../matrix.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_projection.inl \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_clip_space.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../ext/scalar_constants.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_clip_space.inl \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_transform.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_transform.inl \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/matrix_transform.inl \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../geometric.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../trigonometric.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../../extern/glm-1.0.2/glm/gtc/../matrix.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../core/../scene/../render/../ecs/Entity.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/Mesh.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/glm.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/VertexArray.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/VertexBuffer.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/IndexBuffer.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/RenderObject.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/VertexBuffer.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/Render.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/glm.hpp \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/Transform.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/matrix_transform.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../mat4x4.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../vec2.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../vec3.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../vec4.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_projection.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/constants.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/../ext/scalar_constants.inl \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../gtc/constants.inl \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../geometric.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../trigonometric.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../matrix.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_projection.inl \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_clip_space.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/../ext/scalar_constants.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_clip_space.inl \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_transform.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../ext/matrix_transform.inl \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/matrix_transform.inl \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../geometric.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../trigonometric.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../../extern/glm-1.0.2/glm/gtc/../matrix.hpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../ecs/Entity.h
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/voxel/../render/../scene/Scene.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/iostream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/istream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/ostream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/format \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/queue \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__fwd/deque.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__fwd/queue.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/deque \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/stack \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__fwd/stack.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/print \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/unistd.h

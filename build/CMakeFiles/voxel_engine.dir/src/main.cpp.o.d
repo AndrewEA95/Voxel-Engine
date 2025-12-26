@@ -1015,4 +1015,9 @@ CMakeFiles/voxel_engine.dir/src/main.cpp.o: \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../game/../scene/../render/../ecs/Entity.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../game/../ecs/Registry.h \
   /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../game/../ecs/Entity.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/typeindex
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/typeindex \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../game/../core/ChunkManager.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../game/../core/../voxel/Chunk.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../game/../core/../voxel/Voxel.h \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../game/../core/../voxel/../../extern/glm-1.0.2/glm/glm.hpp \
+  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/../game/../core/../scene/Scene.h

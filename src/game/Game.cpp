@@ -17,25 +17,6 @@
 Game::Game()
     : m_chunkManager(m_Scene)
 {
-    // --- Chunk entity ---
-    ECS::Entity chunkEntity = m_Registry.createEntity();
-    m_Registry.addComponent<ECS::TagComponent>(
-        chunkEntity,
-        ECS::TagComponent{ "Chunk_0_0_0" }
-    );
-    m_Registry.addComponent<ECS::TransformComponent>(
-        chunkEntity,
-        ECS::TransformComponent{}
-    );
-
-    Chunk chunk({0,0,0});
-    chunk.generateTestData();
-
-    Render::RenderObject chunkObj = ChunkMesher::buildMesh(chunk, m_chunkManager);
-    chunkObj.isStatic = true;
-    chunkObj.entity = chunkEntity;        // ECS -> Scene mapping
-    m_Scene.addObject(chunkObj);
-
     // --- Cube A ---
     ECS::Entity cubeAEntity = m_Registry.createEntity();
     m_Registry.addComponent<ECS::TagComponent>(
@@ -99,7 +80,11 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
         window.setCursorLocked(cursorLocked);
     }
 
+    // Update camera movement
     camera.update(dt);
+
+    // ✅ Always update chunks every frame
+    m_chunkManager.update(camera.getPosition());
 
     // Left click to pick
     if (Core::Input::isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT))
@@ -141,7 +126,7 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
 
         if (Core::Input::isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT))
         {
-            if (now - lastClickTime < 0.25) // 250ms double-click window
+            if (now - lastClickTime < 0.25)
                 doubleClick = true;
 
             lastClickTime = now;
@@ -153,11 +138,8 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
             glm::vec3 pos = tc.getWorldPosition();
 
             camera.setPivot(pos);
-            camera.setDistance(5.0f); // zoom in close
+            camera.setDistance(5.0f);
         }
-
-        // Update chunk streaming
-        m_chunkManager.update(camera.getPosition());
 
         m_selected = hit;
 
@@ -166,9 +148,8 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
             auto& tag = m_Registry.getComponent<ECS::TagComponent>(hit);
             LOG_ENGINE_INFO("Selected: " + tag.name);
 
-            // New: move camera pivot to selected object
             auto& tc = m_Registry.getComponent<ECS::TransformComponent>(hit).transform;
-            glm::vec3 worldPos = tc.getWorldPosition(); // or extract from world matrix
+            glm::vec3 worldPos = tc.getWorldPosition();
             camera.setPivot(worldPos);
         }
     }
@@ -191,7 +172,7 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
 
     // Animate Cube A rotation in ECS
     {
-        ECS::Entity cubeAEntity = 2; // or store this in a member variable
+        ECS::Entity cubeAEntity = 2;
         if (m_Registry.hasComponent<ECS::TransformComponent>(cubeAEntity))
         {
             auto& tA = m_Registry.getComponent<ECS::TransformComponent>(cubeAEntity).transform;
@@ -203,7 +184,7 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
 
     // Animate Cube B scale in ECS
     {
-        ECS::Entity cubeBEntity = 3; // or store this in a member variable
+        ECS::Entity cubeBEntity = 3;
         if (m_Registry.hasComponent<ECS::TransformComponent>(cubeBEntity))
         {
             static float t = 0.0f;
@@ -218,11 +199,11 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
 
     // Prevent Cube B from inheriting rotation from Cube A
     {
-        ECS::Entity cubeBEntity = 3; // or store this in a member variable
+        ECS::Entity cubeBEntity = 3;
         if (m_Registry.hasComponent<ECS::TransformComponent>(cubeBEntity))
         {
             auto& tB = m_Registry.getComponent<ECS::TransformComponent>(cubeBEntity).transform;
-            tB.setRotation(glm::vec3(0.0f)); // lock rotation to zero
+            tB.setRotation(glm::vec3(0.0f));
         }
     }
 
@@ -239,7 +220,7 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
     // Compute ECS world transforms
     ECS::ComputeWorldTransforms(m_Registry);
 
-    // Sync ECS → Scene using world matrices and explicit entity mapping
+    // Sync ECS → Scene
     for (auto& obj : m_Scene.getObjects())
     {
         ECS::Entity e = obj.entity;

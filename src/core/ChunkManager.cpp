@@ -5,13 +5,15 @@
 #include "../render/RenderObject.h"
 #include "../render/Render.h"
 
+#include "iostream"
+
 #include <cmath>
 #include <vector>
 
 ChunkManager::ChunkManager(Scene& scene)
     : m_scene(scene)
 {
-    m_loadRadius = 1;
+    m_loadRadius = 2;
 }
 
 ChunkCoord ChunkManager::worldToChunk(const glm::vec3& pos)
@@ -79,6 +81,14 @@ void ChunkManager::loadChunk(const ChunkCoord& coord)
 
     Render::RenderObject obj = ChunkMesher::buildMesh(chunk, *this);
     obj.isStatic = true;
+    obj.entity = ECS::INVALID_ENTITY;
+
+    std::cout << "Loading chunk at coord: "
+          << coord.x << ", " << coord.y << ", " << coord.z
+          << "  worldPos: "
+          << chunk.getWorldPosition().x << ", "
+          << chunk.getWorldPosition().y << ", "
+          << chunk.getWorldPosition().z << "\n";
 
     m_scene.addObject(obj);
 

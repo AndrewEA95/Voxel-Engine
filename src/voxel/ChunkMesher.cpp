@@ -65,10 +65,6 @@ static void addQuad(
     push(p2);
     push(p3);
 
-    std::cout << "Quad emitted: origin=(" << origin.x << "," << origin.y << "," << origin.z
-          << ") u=(" << u.x << "," << u.y << "," << u.z
-          << ") v=(" << v.x << "," << v.y << "," << v.z << ")\n";
-
     indices.push_back(startIndex + 0);
     indices.push_back(startIndex + 1);
     indices.push_back(startIndex + 2);

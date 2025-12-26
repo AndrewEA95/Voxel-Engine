@@ -14,9 +14,9 @@ class Chunk
         Voxel& get(int x, int y, int z);
         const Voxel& get(int x, int y, int z) const;
 
-        glm::ivec3 getWorldPosition() const { return m_WorldPos;}
+        glm::ivec3 m_WorldPos;
+        glm::ivec3 getWorldPosition() const { return m_WorldPos; }
     
     private:
-        glm::vec3 m_WorldPos;
         Voxel m_Voxels[SIZE][SIZE][SIZE];
 };

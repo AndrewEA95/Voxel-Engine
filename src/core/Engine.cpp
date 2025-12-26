@@ -3,6 +3,7 @@
 #include "Log.h"
 #include "Time.h"
 #include "../render/Render.h"
+#include "../render/Camera.h"
 
 namespace Core 
 {
@@ -10,6 +11,10 @@ namespace Core
         : m_camera(70.0f, 1280.0f / 720.0f, 0.1f, 500.0f)
     {
         Logger::init("engine.log");
+
+        m_camera.setPosition(glm::vec3(40.0f, 60.0f, 40.0f));
+        m_camera.setRotation(-45.0f, -30.0f);
+        m_camera.setMode(CameraMode::FPS);
 
         Platform::WindowProps props;
         props.title = "Voxel Engine";

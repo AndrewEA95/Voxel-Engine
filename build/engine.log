@@ -1,3 +1,3 @@
-[INFO] [Window] 2025-12-25 23:00:36 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - Initializing window: Voxel Engine
-[INFO] [Window] 2025-12-25 23:00:36 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:71 - OpenGL version: 4.1 Metal - 90.5
-[INFO] [Window] 2025-12-25 23:00:36 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:138 - Window initialized successfully
+[INFO] [Window] 2025-12-25 23:26:30 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - Initializing window: Voxel Engine
+[INFO] [Window] 2025-12-25 23:26:30 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:71 - OpenGL version: 4.1 Metal - 90.5
+[INFO] [Window] 2025-12-25 23:26:30 /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp:138 - Window initialized successfully

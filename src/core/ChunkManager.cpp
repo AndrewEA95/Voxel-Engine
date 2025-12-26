@@ -13,7 +13,7 @@
 ChunkManager::ChunkManager(Scene& scene)
     : m_scene(scene)
 {
-    m_loadRadius = 2;
+    m_loadRadius = 4;
 }
 
 ChunkCoord ChunkManager::worldToChunk(const glm::vec3& pos)
@@ -89,6 +89,9 @@ void ChunkManager::loadChunk(const ChunkCoord& coord)
           << chunk.getWorldPosition().x << ", "
           << chunk.getWorldPosition().y << ", "
           << chunk.getWorldPosition().z << "\n";
+
+    std::cout << "Total chunks loaded: " << m_chunks.size() << "\n";
+    
 
     m_scene.addObject(obj);
 

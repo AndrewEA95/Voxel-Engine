@@ -145,14 +145,7 @@ static void greedyMeshDirection(
             continue; // should never hit
         }
 
-        // Face color by normal for debugging
-        glm::vec3 color;
-        if (nx == 1)      color = glm::vec3(1, 0, 0);   // +X red
-        else if (nx == -1) color = glm::vec3(0.6f, 0, 0);
-        else if (ny == 1)  color = glm::vec3(0, 1, 0);   // +Y green
-        else if (ny == -1) color = glm::vec3(0, 0.6f, 0);
-        else if (nz == 1)  color = glm::vec3(0, 0, 1);   // +Z blue
-        else               color = glm::vec3(0, 0, 0.6f);
+        glm::vec3 color = chunk.get(x, y, z).getColor();
 
         addQuad(vertices, indices, origin, uVec, vVec, color);
     }

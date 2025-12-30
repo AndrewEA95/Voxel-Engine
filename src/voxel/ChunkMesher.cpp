@@ -2,8 +2,6 @@
 #include "Chunk.h"
 #include "../core/ChunkManager.h"
 #include "../render/Mesh.h"
-//#include "../render/VertexBuffer.h"
-//#include "../render/BufferLayout.h"
 #include "../render/Render.h"
 #include <iostream>
 
@@ -212,8 +210,8 @@ Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk,
     greedyMeshDirection(chunk, vertices, indices,  0, 0, +1);
     greedyMeshDirection(chunk, vertices, indices,  0, 0, -1);
 
-    std::cout << "[buildMesh] verts=" << vertices.size()
-              << " inds=" << indices.size() << "\n";
+    // std::cout << "[buildMesh] verts=" << vertices.size()
+    //           << " inds=" << indices.size() << "\n";
 
     Render::BufferLayout layout = {
         { Render::ShaderDataType::Float3, "a_Position" },
@@ -224,5 +222,8 @@ Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk,
 
     Render::RenderObject obj(mesh, glm::vec3(0.6f, 0.8f, 0.9f));
     obj.transform.setPosition(chunk.getWorldPosition());
+
+    glm::mat4 model = obj.transform.getModelMatrix();
+    obj.transform.setWorldMatrix(model);
     return obj;
 }

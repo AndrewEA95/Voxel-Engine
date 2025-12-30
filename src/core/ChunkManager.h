@@ -39,7 +39,8 @@ private:
 
     std::unordered_map<ChunkCoord, Chunk, ChunkCoordHash> m_chunks;
 
-    int m_loadRadius = 4; // chunks in each direction
+    int m_loadRadius; // chunks in each direction
+    int m_verticalRadius;
 
     void loadChunk(const ChunkCoord& coord);
     void unloadFarChunks(const ChunkCoord& center);

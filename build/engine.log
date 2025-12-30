@@ -1,5 +1,6 @@
-[INFO] [Window] 2025-12-29 18:55:37 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - Initializing window: Voxel Engine
-[INFO] [Window] 2025-12-29 18:55:38 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:71 - OpenGL version: 4.1 Metal - 90.5
-[INFO] [Window] 2025-12-29 18:55:38 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:138 - Window initialized successfully
-[WARN] [Engine] 2025-12-29 18:55:38 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/render/Shader.cpp:114 - Uniform not found: u_Color
-[INFO] [Engine] 2025-12-29 18:56:14 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/Game.cpp:165 - Switched to EDITOR mode
+[INFO] [Window] 2025-12-29 21:10:03 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - Initializing window: Voxel Engine
+[INFO] [Window] 2025-12-29 21:10:03 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:71 - OpenGL version: 4.1 Metal - 90.5
+[INFO] [Window] 2025-12-29 21:10:03 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:138 - Window initialized successfully
+[WARN] [Engine] 2025-12-29 21:10:03 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/render/Shader.cpp:114 - Uniform not found: u_Color
+[INFO] [Engine] 2025-12-29 21:10:33 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/Game.cpp:163 - Switched to EDITOR mode
+[INFO] [Engine] 2025-12-29 21:10:37 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/Game.cpp:169 - Switched to FPS mode

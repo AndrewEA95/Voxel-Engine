@@ -1,7 +1,7 @@
 #define GL_SILENCE_DEPRECATION
 #include <OpenGL/gl.h>
 
-#include <iostream>
+//#include <iostream>
 
 #include "Transform.h"
 

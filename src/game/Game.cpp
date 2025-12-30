@@ -1,8 +1,6 @@
 #define GL_SILENCE_DEPRECATION
 
 #include "Game.h"
-#include "../voxel/Chunk.h"
-#include "../voxel/ChunkMesher.h"
 #include "../core/Input.h"
 #include "../core/Log.h"
 #include "../render/Render.h"
@@ -65,8 +63,8 @@ Game::Game()
     cubeB.entity = cubeBEntity;
 
     // Add to scene
-    m_Scene.addObject(cubeA);
-    m_Scene.addObject(cubeB);
+    // m_Scene.addObject(cubeA);
+    // m_Scene.addObject(cubeB);
 
     // --- Hierarchy: make Cube B a child of Cube A ---
     ECS::Attach(m_Registry, cubeBEntity, cubeAEntity);
@@ -228,6 +226,9 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
         ECS::Entity e = obj.entity;
         if (m_Registry.hasComponent<ECS::TransformComponent>(e))
         {
+            if (e == ECS::INVALID_ENTITY)
+                std::cout << "[WARN] INVALID_ENTITY has TransformComponent!\n";
+
             auto& tc = m_Registry.getComponent<ECS::TransformComponent>(e);
             obj.transform.setWorldMatrix(tc.transform.getWorldMatrix());
         }
@@ -247,13 +248,12 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
 
 void Game::onRender(const Render::Camera& camera, float dt)
 {
+    glEnable(GL_DEPTH_TEST);
     glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    std::cout << "Scene objects: " << m_Scene.getObjects().size() << "\n";
-
-    // Draw world
     Render::Renderer::drawScene(m_Scene, camera.getViewProjectionMatrix(), m_selected);
+    
 
     // Draw crosshair only in FPS mode
     if (camera.getMode() == CameraMode::FPS)

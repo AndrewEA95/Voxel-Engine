@@ -10,7 +10,7 @@ class Chunk
 
         Chunk(glm::ivec3 worldPos);
 
-        void generateTestData(); // fill with solid blocks
+        void generateTerrain();
         Voxel& get(int x, int y, int z);
         const Voxel& get(int x, int y, int z) const;
 

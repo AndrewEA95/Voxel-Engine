@@ -1017,11 +1017,6 @@ CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o: \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../voxel/Voxel.h \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../voxel/../../extern/glm-1.0.2/glm/glm.hpp \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../scene/Scene.h \
-  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../voxel/Chunk.h \
-  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../voxel/ChunkMesher.h \
-  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../voxel/../core/ChunkManager.h \
-  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../voxel/../render/Mesh.h \
-  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../voxel/../render/RenderObject.h \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/Input.h \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/Log.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/fstream \

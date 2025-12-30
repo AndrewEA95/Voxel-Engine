@@ -12,7 +12,7 @@ namespace Core
     {
         Logger::init("engine.log");
 
-        m_camera.setPosition(glm::vec3(40.0f, 60.0f, 40.0f));
+        m_camera.setPosition(glm::vec3(40.0f, 80.0f, 40.0f));
         m_camera.setRotation(-45.0f, -30.0f);
         m_camera.setMode(CameraMode::FPS);
 

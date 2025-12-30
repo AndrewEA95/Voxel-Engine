@@ -105,8 +105,9 @@ namespace Render
     {
         s_TestShader->bind();
 
-        // Use ECS world matrix instead of local model matrix
-        glm::mat4 model = transform.getWorldMatrix();
+        glm::mat4 model = transform.hasWorldMatrix()
+            ? transform.getWorldMatrix()    // ECS-driven or explicitly world
+            : transform.getModelMatrix();   // engine-driven (chunks, etc.)
 
         s_TestShader->setUniformMat4("u_ViewProj", viewProj);
         s_TestShader->setUniformMat4("u_Model", model);
@@ -142,7 +143,7 @@ namespace Render
                 glDisable(GL_DEPTH_TEST);
 
                 s_TestShader->bind();
-                s_TestShader->setUniformVec3("u_Color", glm::vec3(1.0f, 1.0f, 0.0f));
+                s_TestShader->setUniformVec3("u_Colo1", glm::vec3(1.0f, 1.0f, 0.0f));
                 s_TestShader->setUniformMat4("u_Model", obj.transform.getWorldMatrix());
                 s_TestShader->setUniformMat4("u_ViewProj", viewProj);
 
@@ -167,12 +168,12 @@ namespace Render
     {
         s_TestShader->bind();
 
-        // Use ECS/world transform like drawMesh does
-        glm::mat4 model = obj.transform.getWorldMatrix();
+        glm::mat4 model = obj.transform.hasWorldMatrix()
+            ? obj.transform.getWorldMatrix()
+            : obj.transform.getModelMatrix();
 
         s_TestShader->setUniformMat4("u_ViewProj", viewProj);
         s_TestShader->setUniformMat4("u_Model", model);
-        //s_TestShader->setUniformVec3("u_Color", obj.color);
 
         obj.mesh->draw();
     }

@@ -224,13 +224,12 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
     for (auto& obj : m_Scene.getObjects())
     {
         ECS::Entity e = obj.entity;
-        if (m_Registry.hasComponent<ECS::TransformComponent>(e))
+        if (e != ECS::INVALID_ENTITY &&
+            m_Registry.hasComponent<ECS::TransformComponent>(e))
         {
-            if (e == ECS::INVALID_ENTITY)
-                std::cout << "[WARN] INVALID_ENTITY has TransformComponent!\n";
-
             auto& tc = m_Registry.getComponent<ECS::TransformComponent>(e);
             obj.transform.setWorldMatrix(tc.transform.getWorldMatrix());
+            // m_HasWorldMatrix is set inside setWorldMatrix
         }
     }
 

@@ -221,9 +221,7 @@ Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk,
     Render::Mesh* mesh = new Render::Mesh(vertices, indices, layout);
 
     Render::RenderObject obj(mesh, glm::vec3(0.6f, 0.8f, 0.9f));
-    obj.transform.setPosition(chunk.getWorldPosition());
+    obj.transform.setPosition(chunk.getWorldPosition()); // local mode; world matrix not used
 
-    glm::mat4 model = obj.transform.getModelMatrix();
-    obj.transform.setWorldMatrix(model);
     return obj;
 }

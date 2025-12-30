@@ -45,10 +45,10 @@ namespace Render
         const float speed = 10.0f;   // <-- THIS is the missing variable
 
         // Horizontal movement
-        if (Core::Input::isKeyDown(GLFW_KEY_W)) m_position += forward * speed * dt;
-        if (Core::Input::isKeyDown(GLFW_KEY_S)) m_position -= forward * speed * dt;
-        if (Core::Input::isKeyDown(GLFW_KEY_A)) m_position -= right   * speed * dt;
-        if (Core::Input::isKeyDown(GLFW_KEY_D)) m_position += right   * speed * dt;
+        if (Core::Input::isKeyDown(GLFW_KEY_W)) m_position += forward * m_movementSpeed * dt;
+        if (Core::Input::isKeyDown(GLFW_KEY_S)) m_position -= forward * m_movementSpeed * dt;
+        if (Core::Input::isKeyDown(GLFW_KEY_A)) m_position -= right   * m_movementSpeed * dt;
+        if (Core::Input::isKeyDown(GLFW_KEY_D)) m_position += right   * m_movementSpeed * dt;
 
         // Vertical movement (fly mode)
         if (Core::Input::isKeyDown(GLFW_KEY_SPACE))

@@ -55,6 +55,8 @@ private:
     int m_loadRadius; // chunks in each direction
     int m_verticalRadius;
 
+    TerrainGenerator m_terrain; 
+
     void loadChunk(const ChunkCoord& coord);
     void unloadFarChunks(const ChunkCoord& center);
     void unloadChunk(const ChunkCoord& coord);

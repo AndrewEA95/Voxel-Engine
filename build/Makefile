@@ -695,6 +695,30 @@ src/voxel/ChunkMesher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/voxel_engine.dir/build.make CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.s
 .PHONY : src/voxel/ChunkMesher.cpp.s
 
+src/voxel/TerrainGenerator.o: src/voxel/TerrainGenerator.cpp.o
+.PHONY : src/voxel/TerrainGenerator.o
+
+# target to build an object file
+src/voxel/TerrainGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/voxel_engine.dir/build.make CMakeFiles/voxel_engine.dir/src/voxel/TerrainGenerator.cpp.o
+.PHONY : src/voxel/TerrainGenerator.cpp.o
+
+src/voxel/TerrainGenerator.i: src/voxel/TerrainGenerator.cpp.i
+.PHONY : src/voxel/TerrainGenerator.i
+
+# target to preprocess a source file
+src/voxel/TerrainGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/voxel_engine.dir/build.make CMakeFiles/voxel_engine.dir/src/voxel/TerrainGenerator.cpp.i
+.PHONY : src/voxel/TerrainGenerator.cpp.i
+
+src/voxel/TerrainGenerator.s: src/voxel/TerrainGenerator.cpp.s
+.PHONY : src/voxel/TerrainGenerator.s
+
+# target to generate assembly for a file
+src/voxel/TerrainGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/voxel_engine.dir/build.make CMakeFiles/voxel_engine.dir/src/voxel/TerrainGenerator.cpp.s
+.PHONY : src/voxel/TerrainGenerator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -770,6 +794,9 @@ help:
 	@echo "... src/voxel/ChunkMesher.o"
 	@echo "... src/voxel/ChunkMesher.i"
 	@echo "... src/voxel/ChunkMesher.s"
+	@echo "... src/voxel/TerrainGenerator.o"
+	@echo "... src/voxel/TerrainGenerator.i"
+	@echo "... src/voxel/TerrainGenerator.s"
 .PHONY : help
 
 

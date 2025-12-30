@@ -35,6 +35,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/voxel_engine.dir/src/voxel/Chunk.cpp.o.d"
   "CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o"
   "CMakeFiles/voxel_engine.dir/src/voxel/ChunkMesher.cpp.o.d"
+  "CMakeFiles/voxel_engine.dir/src/voxel/TerrainGenerator.cpp.o"
+  "CMakeFiles/voxel_engine.dir/src/voxel/TerrainGenerator.cpp.o.d"
   "voxel_engine"
   "voxel_engine.pdb"
 )

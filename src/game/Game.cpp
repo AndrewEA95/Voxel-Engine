@@ -83,6 +83,20 @@ void Game::onUpdate(float dt, Render::Camera& camera, Platform::Window& window)
     // Update camera movement
     camera.update(dt);
 
+    // Update camera movement
+    {
+        // --- Sprinting ---
+        bool isSprinting = Core::Input::isKeyDown(GLFW_KEY_LEFT_SHIFT);
+
+        float walkSpeed = 5.0f;
+        float sprintSpeed = 20.0f;
+
+        float speed = isSprinting ? sprintSpeed : walkSpeed;
+        camera.setMovementSpeed(speed);  // or setSpeedMultiplier()
+
+        camera.update(dt);
+    }
+
     // ✅ Always update chunks every frame
     m_chunkManager.update(camera.getPosition());
 

@@ -216,7 +216,7 @@ void ChunkManager::workerThread()
 
         // Heavy work off-thread:
         Chunk chunk(glm::ivec3(coord.x, coord.y, coord.z));
-        chunk.generateTerrain();
+        chunk.generateTerrain(m_terrain);
 
         std::vector<float> vertices;
         std::vector<uint32_t> indices;

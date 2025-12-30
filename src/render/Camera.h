@@ -50,6 +50,11 @@ namespace Render
             float getDistance() const { return m_distance; }
             void setDistance(float dist);
 
+            void setMovementSpeed(float speed)
+            {
+                m_movementSpeed = speed;
+            }
+
             void update(float dt);
 
             glm::vec3 getForward() const;
@@ -76,6 +81,8 @@ namespace Render
 
             float m_ViewportWidth = 1280.0f;
             float m_ViewportHeight = 720.0f;
+
+            float m_movementSpeed = 5.0f; // default walk speed
 
             void updateFPS(float dt);
             void updateEditor(float dt);

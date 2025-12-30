@@ -1,8 +1,12 @@
 #pragma once
 
+#include "TerrainGenerator.h"
 #include "Voxel.h"
-#include"../../extern/glm-1.0.2/glm/glm.hpp"
+#include "../../extern/glm-1.0.2/glm/glm.hpp"
 
+// -----------------------------
+// ChunkCoord + hashing
+// -----------------------------
 struct ChunkCoord
 {
     int x, y, z;
@@ -33,20 +37,38 @@ namespace std
     };
 }
 
+// -----------------------------
+// Chunk class
+// -----------------------------
 class Chunk
 {
-    public:
-        static constexpr int SIZE = 16;
+public:
+    static constexpr int SIZE = 16;
 
-        Chunk(glm::ivec3 worldPos);
+    // worldPos is in CHUNK COORDINATES (not voxel coordinates)
+    Chunk(glm::ivec3 worldPos);
 
-        void generateTerrain();
-        Voxel& get(int x, int y, int z);
-        const Voxel& get(int x, int y, int z) const;
+    // Chunk coordinate in the world (chunk-space)
+    glm::ivec3 m_position;
 
-        glm::ivec3 m_WorldPos;
-        glm::ivec3 getWorldPosition() const { return m_WorldPos; }
-    
-    private:
-        Voxel m_Voxels[SIZE][SIZE][SIZE];
+    // Terrain generation
+    void generateTerrain(const TerrainGenerator& terrain);
+
+    // Voxel access
+    Voxel& get(int x, int y, int z);
+    const Voxel& get(int x, int y, int z) const;
+
+    // World voxel position (top-left corner of chunk)
+    glm::ivec3 getWorldPosition() const
+    {
+        return glm::ivec3(
+            m_position.x * SIZE,
+            m_position.y * SIZE,
+            m_position.z * SIZE
+        );
+    }
+
+private:
+    // 3D voxel storage
+    Voxel m_Voxels[SIZE][SIZE][SIZE];
 };

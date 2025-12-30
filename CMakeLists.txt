@@ -41,6 +41,7 @@ add_executable(voxel_engine
     src/render/VertexBuffer.cpp
     src/voxel/Chunk.cpp
     src/voxel/ChunkMesher.cpp
+    src/voxel/TerrainGenerator.cpp
 )
 
 target_link_libraries(voxel_engine

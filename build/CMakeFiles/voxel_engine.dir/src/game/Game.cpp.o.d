@@ -1035,6 +1035,8 @@ CMakeFiles/voxel_engine.dir/src/game/Game.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/forward_list \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../voxel/Chunk.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../voxel/TerrainGenerator.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../voxel/../../extern/FastNoiseLite.h \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../voxel/Voxel.h \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../voxel/../../extern/glm-1.0.2/glm/glm.hpp \
   /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/game/../core/../scene/Scene.h \

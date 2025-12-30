@@ -1,4 +1,4 @@
-[INFO] [Window] 2025-12-30 02:39:27 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - Initializing window: Voxel Engine
-[INFO] [Window] 2025-12-30 02:39:28 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:71 - OpenGL version: 4.1 Metal - 90.5
-[INFO] [Window] 2025-12-30 02:39:28 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:138 - Window initialized successfully
-[WARN] [Engine] 2025-12-30 02:39:28 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/render/Shader.cpp:114 - Uniform not found: u_Color
+[INFO] [Window] 2025-12-30 17:21:41 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:79 - Initializing window: Voxel Engine
+[INFO] [Window] 2025-12-30 17:21:41 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:71 - OpenGL version: 4.1 Metal - 90.5
+[INFO] [Window] 2025-12-30 17:21:41 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp:138 - Window initialized successfully
+[WARN] [Engine] 2025-12-30 17:21:41 /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/render/Shader.cpp:114 - Uniform not found: u_Color

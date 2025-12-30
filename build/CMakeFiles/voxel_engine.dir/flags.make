@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glad/include -I/Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/include -I/Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glm-1.0.2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glad/include -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/include -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glm-1.0.2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks
 
 CXX_FLAGSarm64 = -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -mmacosx-version-min=26.0 -Wall -Wextra -Wpedantic
 

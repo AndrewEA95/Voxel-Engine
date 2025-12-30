@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine
+CMAKE_SOURCE_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine/build
+CMAKE_BINARY_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include extern/glfw/CMakeFiles/uninstall.dir/compiler_depend.make
 include extern/glfw/CMakeFiles/uninstall.dir/progress.make
 
 extern/glfw/CMakeFiles/uninstall:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw && /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -P /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/cmake_uninstall.cmake
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw && /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -P /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/cmake_uninstall.cmake
 
 uninstall: extern/glfw/CMakeFiles/uninstall
 uninstall: extern/glfw/CMakeFiles/uninstall.dir/build.make
@@ -78,10 +78,10 @@ extern/glfw/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : extern/glfw/CMakeFiles/uninstall.dir/build
 
 extern/glfw/CMakeFiles/uninstall.dir/clean:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : extern/glfw/CMakeFiles/uninstall.dir/clean
 
 extern/glfw/CMakeFiles/uninstall.dir/depend:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrewanglin/projects2/cmake_test/Game_engine /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw /Users/andrewanglin/projects2/cmake_test/Game_engine/build /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrewanglin/Projects2/cmake_test/Game_engine /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw /Users/andrewanglin/Projects2/cmake_test/Game_engine/build /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : extern/glfw/CMakeFiles/uninstall.dir/depend
 

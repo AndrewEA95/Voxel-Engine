@@ -5,7 +5,7 @@
 # compile OBJC with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
 C_DEFINES = -D_GLFW_COCOA
 
-C_INCLUDES = -I/Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/include -I/Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src -I/Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/src
+C_INCLUDES = -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/include -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/src
 
 C_FLAGSarm64 = -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -mmacosx-version-min=26.0 -fPIC -Wall
 
@@ -13,7 +13,7 @@ C_FLAGS = -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Develo
 
 OBJC_DEFINES = -D_GLFW_COCOA
 
-OBJC_INCLUDES = -I/Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/include -I/Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src -I/Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/src
+OBJC_INCLUDES = -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/include -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src -I/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/src
 
 OBJC_FLAGSarm64 = -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -mmacosx-version-min=26.0 -fPIC -Wall
 

@@ -1,6 +1,6 @@
 CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o: \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/IndexBuffer.cpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/IndexBuffer.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/render/IndexBuffer.cpp \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/render/IndexBuffer.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/cstdint \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__config_site \
@@ -32,5 +32,5 @@ CMakeFiles/voxel_engine.dir/src/render/IndexBuffer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_types/_intmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_types/_uintmax_t.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glad/include/glad/glad.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/render/../../extern/glad/include/glad/../KHR/khrplatform.h
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/render/../../extern/glad/include/glad/glad.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/render/../../extern/glad/include/glad/../KHR/khrplatform.h

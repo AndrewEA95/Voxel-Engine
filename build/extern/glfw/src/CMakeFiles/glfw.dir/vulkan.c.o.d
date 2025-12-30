@@ -1,7 +1,7 @@
 extern/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/vulkan.c \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/internal.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/../include/GLFW/glfw3.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/vulkan.c \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/internal.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/../include/GLFW/glfw3.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_header_macro.h \
@@ -33,9 +33,9 @@ extern/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_types/_intmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_types/_uintmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdbool.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/platform.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/null_platform.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/cocoa_platform.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/platform.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/null_platform.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/cocoa_platform.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h \
@@ -823,13 +823,13 @@ extern/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDUsageTables.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDValue.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDTransaction.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/null_joystick.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/cocoa_joystick.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/null_joystick.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/cocoa_joystick.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOCFPlugIn.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/posix_thread.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/posix_thread.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/pthread.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/pthread/sched.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/pthread/pthread_impl.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/pthread/qos.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/cocoa_time.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src/../include/GLFW/glfw3native.h
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/cocoa_time.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src/../include/GLFW/glfw3native.h

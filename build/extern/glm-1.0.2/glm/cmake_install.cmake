@@ -1,4 +1,4 @@
-# Install script for directory: /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm
+# Install script for directory: /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

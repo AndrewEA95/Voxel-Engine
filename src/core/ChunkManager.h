@@ -35,12 +35,14 @@ public:
 
 private:
     Scene& m_scene;
+    ChunkCoord m_lastCenter = { 999999, 999999, 999999 };
 
     std::unordered_map<ChunkCoord, Chunk, ChunkCoordHash> m_chunks;
 
     int m_loadRadius = 4; // chunks in each direction
 
     void loadChunk(const ChunkCoord& coord);
+    void unloadFarChunks(const ChunkCoord& center);
     void unloadChunk(const ChunkCoord& coord);
 
     ChunkCoord worldToChunk(const glm::vec3& pos);

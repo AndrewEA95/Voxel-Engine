@@ -1,6 +1,6 @@
 CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o: \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.cpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/Window.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.cpp \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/Window.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/functional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__config_site \
@@ -775,10 +775,10 @@ CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/cstdarg \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/../../extern/glad/include/glad/glad.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/../../extern/glad/include/glad/../KHR/khrplatform.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/../../extern/glfw/include/GLFW/glfw3.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/../core/Log.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/../../extern/glad/include/glad/glad.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/../../extern/glad/include/glad/../KHR/khrplatform.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/../../extern/glfw/include/GLFW/glfw3.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/../core/Log.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/path.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/iomanip \
@@ -815,4 +815,4 @@ CMakeFiles/voxel_engine.dir/src/platform/Window.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/signal.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/platform/../core/Input.h
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/platform/../core/Input.h

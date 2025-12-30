@@ -1,4 +1,4 @@
-# Install script for directory: /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/docs
+# Install script for directory: /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

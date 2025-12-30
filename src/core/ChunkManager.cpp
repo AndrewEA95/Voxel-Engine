@@ -13,14 +13,14 @@
 ChunkManager::ChunkManager(Scene& scene)
     : m_scene(scene)
 {
-    m_loadRadius = 4;
+    m_loadRadius = 1;
 }
 
 ChunkCoord ChunkManager::worldToChunk(const glm::vec3& pos)
 {
     return {
         (int)std::floor(pos.x / Chunk::SIZE),
-        (int)std::floor(pos.y / Chunk::SIZE),
+        0, // lock force Y = 0 for horizontal streaming
         (int)std::floor(pos.z / Chunk::SIZE)
     };
 }
@@ -29,6 +29,17 @@ void ChunkManager::update(const glm::vec3& cameraPos)
 {
     ChunkCoord center = worldToChunk(cameraPos);
 
+     std::cout << "[update] center = " << center.x << ", " << center.y << ", " << center.z << "\n";
+
+    // Only update if the camera entered a new *horizontal* chunk
+    if (center.x == m_lastCenter.x && center.z == m_lastCenter.z)
+        return;
+
+    std::cout << "Camera center chunk: " << center.x << ", " << center.z << "\n";
+
+    m_lastCenter = center;
+
+    // Load new chunks in radius
     for (int x = -m_loadRadius; x <= m_loadRadius; x++)
     for (int z = -m_loadRadius; z <= m_loadRadius; z++)
     {
@@ -37,6 +48,9 @@ void ChunkManager::update(const glm::vec3& cameraPos)
         if (m_chunks.find(coord) == m_chunks.end())
             loadChunk(coord);
     }
+
+    // Unload chunks that are too far away
+    unloadFarChunks(center);
 }
 
 const Chunk* ChunkManager::getChunk(const ChunkCoord& coord) const
@@ -83,19 +97,44 @@ void ChunkManager::loadChunk(const ChunkCoord& coord)
     obj.isStatic = true;
     obj.entity = ECS::INVALID_ENTITY;
 
-    std::cout << "Loading chunk at coord: "
-          << coord.x << ", " << coord.y << ", " << coord.z
-          << "  worldPos: "
-          << chunk.getWorldPosition().x << ", "
-          << chunk.getWorldPosition().y << ", "
-          << chunk.getWorldPosition().z << "\n";
+    obj.color = glm::vec3(
+        (coord.x & 1) ? 1.0f : 0.2f,
+        (coord.z & 1) ? 1.0f : 0.2f,
+        0.3f
+    );
 
-    std::cout << "Total chunks loaded: " << m_chunks.size() << "\n";
+    // std::cout << "Loading chunk at coord: "
+    //       << coord.x << ", " << coord.y << ", " << coord.z
+    //       << "  worldPos: "
+    //       << chunk.getWorldPosition().x << ", "
+    //       << chunk.getWorldPosition().y << ", "
+    //       << chunk.getWorldPosition().z << "\n";
+
+    // std::cout << "Total chunks loaded: " << m_chunks.size() << "\n";
     
 
     m_scene.addObject(obj);
 
     m_chunks.insert({ coord, std::move(chunk) });
+}
+
+void ChunkManager::unloadFarChunks(const ChunkCoord& center)
+{
+    std::vector<ChunkCoord> toRemove;
+
+    for (auto& [coord, chunk] : m_chunks)
+    {
+        int dx = coord.x - center.x;
+        int dz = coord.z - center.z;
+
+        if (std::abs(dx) > m_loadRadius || std::abs(dz) > m_loadRadius)
+            toRemove.push_back(coord);
+    }
+
+    for (auto& coord : toRemove)
+    {
+        unloadChunk(coord);
+    }
 }
 
 void ChunkManager::unloadChunk(const ChunkCoord& coord)

@@ -2,7 +2,8 @@
 #include "Chunk.h"
 #include "../core/ChunkManager.h"
 #include "../render/Mesh.h"
-#include "../render/VertexBuffer.h"
+//#include "../render/VertexBuffer.h"
+//#include "../render/BufferLayout.h"
 #include "../render/Render.h"
 #include <iostream>
 
@@ -82,81 +83,121 @@ static void greedyMeshDirection(
     const Chunk& chunk,
     std::vector<float>& vertices,
     std::vector<uint32_t>& indices,
-    int nx, int ny, int nz) // face normal direction
+    int nx, int ny, int nz)
 {
     const int X = Chunk::SIZE;
     const int Y = Chunk::SIZE;
     const int Z = Chunk::SIZE;
 
-    for (int x = 0; x < X; x++)
-    for (int y = 0; y < Y; y++)
-    for (int z = 0; z < Z; z++)
+    // Determine which 2D plane we are sweeping over
+    int u1, u2, v1, v2, w1, w2;
+
+    if (nx != 0) { // X faces → sweep Y/Z
+        u1 = 1; u2 = 0;  // Y axis
+        v1 = 2; v2 = 0;  // Z axis
+        w1 = 0; w2 = nx; // X axis normal
+    }
+    else if (ny != 0) { // Y faces → sweep X/Z
+        u1 = 0; u2 = 1;  // X axis
+        v1 = 2; v2 = 0;  // Z axis
+        w1 = 1; w2 = ny; // Y axis normal
+    }
+    else { // Z faces → sweep X/Y
+        u1 = 0; u2 = 2;  // X axis
+        v1 = 1; v2 = 2;  // Y axis
+        w1 = 2; w2 = nz; // Z axis normal
+    }
+
+    // Mask for merging
+    struct MaskCell {
+        bool visible;
+        glm::vec3 color;
+    };
+
+    MaskCell mask[X][Y];
+
+    // Sweep through the chunk
+    for (int w = 0; w < Chunk::SIZE; w++)
     {
-        int nxp = x + nx;
-        int nyp = y + ny;
-        int nzp = z + nz;
+        // Build mask for this slice
+        for (int u = 0; u < Chunk::SIZE; u++)
+        for (int v = 0; v < Chunk::SIZE; v++)
+        {
+            int x = (u1 == 0 ? u : (v1 == 0 ? v : w));
+            int y = (u1 == 1 ? u : (v1 == 1 ? v : w));
+            int z = (u1 == 2 ? u : (v1 == 2 ? v : w));
 
-        if (!isFaceExposed(chunk, x, y, z, nxp, nyp, nzp))
-            continue;
+            int nxp = x + nx;
+            int nyp = y + ny;
+            int nzp = z + nz;
 
-        glm::vec3 origin;
-        glm::vec3 uVec(0.0f);
-        glm::vec3 vVec(0.0f);
+            bool exposed = isFaceExposed(chunk, x, y, z, nxp, nyp, nzp);
 
-        // Choose orientation and origin based on face normal
-        if (nx == 1 && ny == 0 && nz == 0) // +X
-        {
-            origin = glm::vec3(x + 1, y, z);
-            uVec   = glm::vec3(0, 1, 0); // Y
-            vVec   = glm::vec3(0, 0, 1); // Z
-        }
-        else if (nx == -1 && ny == 0 && nz == 0) // -X
-        {
-            origin = glm::vec3(x, y, z);
-            uVec   = glm::vec3(0, 1, 0); // Y
-            vVec   = glm::vec3(0, 0, 1); // Z
-        }
-        else if (nx == 0 && ny == 1 && nz == 0) // +Y
-        {
-            origin = glm::vec3(x, y + 1, z);
-            uVec   = glm::vec3(1, 0, 0); // X
-            vVec   = glm::vec3(0, 0, 1); // Z
-        }
-        else if (nx == 0 && ny == -1 && nz == 0) // -Y
-        {
-            origin = glm::vec3(x, y, z);
-            uVec   = glm::vec3(1, 0, 0); // X
-            vVec   = glm::vec3(0, 0, 1); // Z
-        }
-        else if (nx == 0 && ny == 0 && nz == 1) // +Z
-        {
-            origin = glm::vec3(x, y, z + 1);
-            uVec   = glm::vec3(1, 0, 0); // X
-            vVec   = glm::vec3(0, 1, 0); // Y
-        }
-        else if (nx == 0 && ny == 0 && nz == -1) // -Z
-        {
-            origin = glm::vec3(x, y, z);
-            uVec   = glm::vec3(1, 0, 0); // X
-            vVec   = glm::vec3(0, 1, 0); // Y
-        }
-        else
-        {
-            continue; // should never hit
+            mask[u][v].visible = exposed;
+            mask[u][v].color = exposed ? chunk.get(x, y, z).getColor() : glm::vec3(0);
         }
 
-        glm::vec3 color = chunk.get(x, y, z).getColor();
+        // Greedy merge the mask
+        for (int u = 0; u < Chunk::SIZE; u++)
+        for (int v = 0; v < Chunk::SIZE; v++)
+        {
+            if (!mask[u][v].visible)
+                continue;
 
-        addQuad(vertices, indices, origin, uVec, vVec, color);
+            glm::vec3 color = mask[u][v].color;
+
+            // Expand width
+            int width = 1;
+            while (u + width < Chunk::SIZE &&
+                   mask[u + width][v].visible &&
+                   mask[u + width][v].color == color)
+            {
+                width++;
+            }
+
+            // Expand height
+            int height = 1;
+            bool done = false;
+            while (v + height < Chunk::SIZE && !done)
+            {
+                for (int k = 0; k < width; k++)
+                {
+                    if (!mask[u + k][v + height].visible ||
+                        mask[u + k][v + height].color != color)
+                    {
+                        done = true;
+                        break;
+                    }
+                }
+                if (!done) height++;
+            }
+
+            // Mark merged area as consumed
+            for (int du = 0; du < width; du++)
+            for (int dv = 0; dv < height; dv++)
+                mask[u + du][v + dv].visible = false;
+
+            // Compute quad origin and axes
+            glm::vec3 origin(0);
+            origin[u1] = u;
+            origin[v1] = v;
+            origin[w1] = w + (w2 > 0 ? 1 : 0);
+
+            glm::vec3 uVec(0), vVec(0);
+            uVec[u1] = width;
+            vVec[v1] = height;
+
+            addQuad(vertices, indices, origin, uVec, vVec, color);
+        }
     }
 }
-
 // ------------------------------------------------------------
 // Build full greedy mesh for chunk
 // ------------------------------------------------------------
-Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk, const ChunkManager& manager)
+Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk,
+                                            const ChunkManager& manager)
 {
-    (void)manager; // not used yet (reserved for future neighbor-aware version)
+    (void)manager;
 
     std::vector<float> vertices;
     std::vector<uint32_t> indices;
@@ -164,13 +205,15 @@ Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk, const ChunkManag
     vertices.reserve(10000);
     indices.reserve(20000);
 
-    // 6 directions: ±X, ±Y, ±Z
-    greedyMeshDirection(chunk, vertices, indices, +1, 0, 0); // +X
-    greedyMeshDirection(chunk, vertices, indices, -1, 0, 0); // -X
-    greedyMeshDirection(chunk, vertices, indices, 0, +1, 0); // +Y
-    greedyMeshDirection(chunk, vertices, indices, 0, -1, 0); // -Y
-    greedyMeshDirection(chunk, vertices, indices, 0, 0, +1); // +Z
-    greedyMeshDirection(chunk, vertices, indices, 0, 0, -1); // -Z
+    greedyMeshDirection(chunk, vertices, indices, +1, 0, 0);
+    greedyMeshDirection(chunk, vertices, indices, -1, 0, 0);
+    greedyMeshDirection(chunk, vertices, indices,  0, +1, 0);
+    greedyMeshDirection(chunk, vertices, indices,  0, -1, 0);
+    greedyMeshDirection(chunk, vertices, indices,  0, 0, +1);
+    greedyMeshDirection(chunk, vertices, indices,  0, 0, -1);
+
+    std::cout << "[buildMesh] verts=" << vertices.size()
+              << " inds=" << indices.size() << "\n";
 
     Render::BufferLayout layout = {
         { Render::ShaderDataType::Float3, "a_Position" },
@@ -180,7 +223,6 @@ Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk, const ChunkManag
     Render::Mesh* mesh = new Render::Mesh(vertices, indices, layout);
 
     Render::RenderObject obj(mesh, glm::vec3(0.6f, 0.8f, 0.9f));
-    obj.transform.setPosition(chunk.getWorldPosition()); // local positions + chunk transform
-
+    obj.transform.setPosition(chunk.getWorldPosition());
     return obj;
 }

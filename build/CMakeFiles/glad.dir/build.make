@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine
+CMAKE_SOURCE_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine/build
+CMAKE_BINARY_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/glad.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/glad.dir/progress.make
 include CMakeFiles/glad.dir/flags.make
 
 CMakeFiles/glad.dir/extern/glad/src/glad.c.o: CMakeFiles/glad.dir/flags.make
-CMakeFiles/glad.dir/extern/glad/src/glad.c.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glad/src/glad.c
+CMakeFiles/glad.dir/extern/glad/src/glad.c.o: /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glad/src/glad.c
 CMakeFiles/glad.dir/extern/glad/src/glad.c.o: CMakeFiles/glad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/glad.dir/extern/glad/src/glad.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/glad.dir/extern/glad/src/glad.c.o -MF CMakeFiles/glad.dir/extern/glad/src/glad.c.o.d -o CMakeFiles/glad.dir/extern/glad/src/glad.c.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glad/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/glad.dir/extern/glad/src/glad.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/glad.dir/extern/glad/src/glad.c.o -MF CMakeFiles/glad.dir/extern/glad/src/glad.c.o.d -o CMakeFiles/glad.dir/extern/glad/src/glad.c.o -c /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glad/src/glad.c
 
 CMakeFiles/glad.dir/extern/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glad.dir/extern/glad/src/glad.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glad/src/glad.c > CMakeFiles/glad.dir/extern/glad/src/glad.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glad/src/glad.c > CMakeFiles/glad.dir/extern/glad/src/glad.c.i
 
 CMakeFiles/glad.dir/extern/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glad.dir/extern/glad/src/glad.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glad/src/glad.c -o CMakeFiles/glad.dir/extern/glad/src/glad.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glad/src/glad.c -o CMakeFiles/glad.dir/extern/glad/src/glad.c.s
 
 # Object files for target glad
 glad_OBJECTS = \
@@ -93,7 +93,7 @@ glad_EXTERNAL_OBJECTS =
 libglad.a: CMakeFiles/glad.dir/extern/glad/src/glad.c.o
 libglad.a: CMakeFiles/glad.dir/build.make
 libglad.a: CMakeFiles/glad.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libglad.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libglad.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glad.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/glad.dir/clean:
 .PHONY : CMakeFiles/glad.dir/clean
 
 CMakeFiles/glad.dir/depend:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrewanglin/projects2/cmake_test/Game_engine /Users/andrewanglin/projects2/cmake_test/Game_engine /Users/andrewanglin/projects2/cmake_test/Game_engine/build /Users/andrewanglin/projects2/cmake_test/Game_engine/build /Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles/glad.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrewanglin/Projects2/cmake_test/Game_engine /Users/andrewanglin/Projects2/cmake_test/Game_engine /Users/andrewanglin/Projects2/cmake_test/Game_engine/build /Users/andrewanglin/Projects2/cmake_test/Game_engine/build /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/CMakeFiles/glad.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/glad.dir/depend
 

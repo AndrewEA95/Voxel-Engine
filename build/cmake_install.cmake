@@ -1,4 +1,4 @@
-# Install script for directory: /Users/andrewanglin/projects2/cmake_test/Game_engine
+# Install script for directory: /Users/andrewanglin/Projects2/cmake_test/Game_engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/cmake_install.cmake")
+  include("/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/cmake_install.cmake")
+  include("/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/andrewanglin/projects2/cmake_test/Game_engine/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

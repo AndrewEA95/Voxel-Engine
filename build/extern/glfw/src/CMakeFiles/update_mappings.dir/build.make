@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine
+CMAKE_SOURCE_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine/build
+CMAKE_BINARY_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine/build
 
 # Utility rule file for update_mappings.
 
@@ -67,8 +67,8 @@ include extern/glfw/src/CMakeFiles/update_mappings.dir/compiler_depend.make
 include extern/glfw/src/CMakeFiles/update_mappings.dir/progress.make
 
 extern/glfw/src/CMakeFiles/update_mappings:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src && /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -P /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src && /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -P /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 update_mappings: extern/glfw/src/CMakeFiles/update_mappings
 update_mappings: extern/glfw/src/CMakeFiles/update_mappings.dir/build.make
@@ -79,10 +79,10 @@ extern/glfw/src/CMakeFiles/update_mappings.dir/build: update_mappings
 .PHONY : extern/glfw/src/CMakeFiles/update_mappings.dir/build
 
 extern/glfw/src/CMakeFiles/update_mappings.dir/clean:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
 .PHONY : extern/glfw/src/CMakeFiles/update_mappings.dir/clean
 
 extern/glfw/src/CMakeFiles/update_mappings.dir/depend:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrewanglin/projects2/cmake_test/Game_engine /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glfw/src /Users/andrewanglin/projects2/cmake_test/Game_engine/build /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/src /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrewanglin/Projects2/cmake_test/Game_engine /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glfw/src /Users/andrewanglin/Projects2/cmake_test/Game_engine/build /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/src /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : extern/glfw/src/CMakeFiles/update_mappings.dir/depend
 

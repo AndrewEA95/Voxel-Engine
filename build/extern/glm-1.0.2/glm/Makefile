@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine
+CMAKE_SOURCE_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine/build
+CMAKE_BINARY_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm//CMakeFiles/progress.marks
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles 0
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/CMakeFiles /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm//CMakeFiles/progress.marks
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/clean
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/preinstall
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/preinstall
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/rule:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/rule
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/rule
 .PHONY : extern/glm-1.0.2/glm/CMakeFiles/glm.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ glm: extern/glm-1.0.2/glm/CMakeFiles/glm.dir/rule
 
 # fast build rule for target.
 glm/fast:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build
 .PHONY : glm/fast
 
 detail/glm.o: detail/glm.cpp.o
@@ -180,7 +180,7 @@ detail/glm.o: detail/glm.cpp.o
 
 # target to build an object file
 detail/glm.cpp.o:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o
 .PHONY : detail/glm.cpp.o
 
 detail/glm.i: detail/glm.cpp.i
@@ -188,7 +188,7 @@ detail/glm.i: detail/glm.cpp.i
 
 # target to preprocess a source file
 detail/glm.cpp.i:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.i
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.i
 .PHONY : detail/glm.cpp.i
 
 detail/glm.s: detail/glm.cpp.s
@@ -196,7 +196,7 @@ detail/glm.s: detail/glm.cpp.s
 
 # target to generate assembly for a file
 detail/glm.cpp.s:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.s
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(MAKE) $(MAKESILENT) -f extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.s
 .PHONY : detail/glm.cpp.s
 
 # Help Target
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

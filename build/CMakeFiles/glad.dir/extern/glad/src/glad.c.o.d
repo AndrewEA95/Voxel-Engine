@@ -1,5 +1,5 @@
 CMakeFiles/glad.dir/extern/glad/src/glad.c.o: \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glad/src/glad.c \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glad/src/glad.c \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_bounds.h \
@@ -92,7 +92,7 @@ CMakeFiles/glad.dir/extern/glad/src/glad.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/secure/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/secure/_string.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glad/include/glad/glad.h \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glad/include/glad/../KHR/khrplatform.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glad/include/glad/glad.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glad/include/glad/../KHR/khrplatform.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/dlfcn.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdbool.h

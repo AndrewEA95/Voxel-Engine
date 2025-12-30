@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine
+CMAKE_SOURCE_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andrewanglin/projects2/cmake_test/Game_engine/build
+CMAKE_BINARY_DIR = /Users/andrewanglin/Projects2/cmake_test/Game_engine/build
 
 # Include any dependencies generated for this target.
 include extern/glm-1.0.2/glm/CMakeFiles/glm.dir/depend.make
@@ -70,18 +70,18 @@ include extern/glm-1.0.2/glm/CMakeFiles/glm.dir/progress.make
 include extern/glm-1.0.2/glm/CMakeFiles/glm.dir/flags.make
 
 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o: extern/glm-1.0.2/glm/CMakeFiles/glm.dir/flags.make
-extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o: /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm/detail/glm.cpp
+extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o: /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm/detail/glm.cpp
 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o: extern/glm-1.0.2/glm/CMakeFiles/glm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o"
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o -MF CMakeFiles/glm.dir/detail/glm.cpp.o.d -o CMakeFiles/glm.dir/detail/glm.cpp.o -c /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm/detail/glm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o"
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o -MF CMakeFiles/glm.dir/detail/glm.cpp.o.d -o CMakeFiles/glm.dir/detail/glm.cpp.o -c /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm/detail/glm.cpp
 
 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/glm.dir/detail/glm.cpp.i"
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm/detail/glm.cpp > CMakeFiles/glm.dir/detail/glm.cpp.i
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm/detail/glm.cpp > CMakeFiles/glm.dir/detail/glm.cpp.i
 
 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/glm.dir/detail/glm.cpp.s"
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm/detail/glm.cpp -o CMakeFiles/glm.dir/detail/glm.cpp.s
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm/detail/glm.cpp -o CMakeFiles/glm.dir/detail/glm.cpp.s
 
 # Object files for target glm
 glm_OBJECTS = \
@@ -93,19 +93,19 @@ glm_EXTERNAL_OBJECTS =
 extern/glm-1.0.2/glm/libglm.a: extern/glm-1.0.2/glm/CMakeFiles/glm.dir/detail/glm.cpp.o
 extern/glm-1.0.2/glm/libglm.a: extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build.make
 extern/glm-1.0.2/glm/libglm.a: extern/glm-1.0.2/glm/CMakeFiles/glm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/andrewanglin/projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libglm.a"
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && $(CMAKE_COMMAND) -P CMakeFiles/glm.dir/cmake_clean_target.cmake
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glm.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libglm.a"
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && $(CMAKE_COMMAND) -P CMakeFiles/glm.dir/cmake_clean_target.cmake
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build: extern/glm-1.0.2/glm/libglm.a
 .PHONY : extern/glm-1.0.2/glm/CMakeFiles/glm.dir/build
 
 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/clean:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && $(CMAKE_COMMAND) -P CMakeFiles/glm.dir/cmake_clean.cmake
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm && $(CMAKE_COMMAND) -P CMakeFiles/glm.dir/cmake_clean.cmake
 .PHONY : extern/glm-1.0.2/glm/CMakeFiles/glm.dir/clean
 
 extern/glm-1.0.2/glm/CMakeFiles/glm.dir/depend:
-	cd /Users/andrewanglin/projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrewanglin/projects2/cmake_test/Game_engine /Users/andrewanglin/projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm /Users/andrewanglin/projects2/cmake_test/Game_engine/build /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm /Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm/CMakeFiles/glm.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/andrewanglin/Projects2/cmake_test/Game_engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrewanglin/Projects2/cmake_test/Game_engine /Users/andrewanglin/Projects2/cmake_test/Game_engine/extern/glm-1.0.2/glm /Users/andrewanglin/Projects2/cmake_test/Game_engine/build /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm /Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glm-1.0.2/glm/CMakeFiles/glm.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : extern/glm-1.0.2/glm/CMakeFiles/glm.dir/depend
 

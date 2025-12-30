@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>
+#include <deque>
 #include "../render/RenderObject.h"
 
 class Scene
@@ -13,12 +13,12 @@ class Scene
             m_Objects.push_back(obj);
         }
 
-        std::vector<Render::RenderObject>& getObjects()
+        std::deque<Render::RenderObject>& getObjects()
         {
             return m_Objects;
         }
 
-        const std::vector<Render::RenderObject>& getObjects() const
+        const std::deque<Render::RenderObject>& getObjects() const
         {
             return m_Objects;
         }
@@ -33,5 +33,5 @@ class Scene
         }
 
     private:
-        std::vector<Render::RenderObject> m_Objects;
+        std::deque<Render::RenderObject> m_Objects;
 };

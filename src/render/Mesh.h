@@ -1,11 +1,8 @@
 #pragma once
 
 #include <vector>
-
-#include "../../extern/glm-1.0.2/glm/glm.hpp"
-#include "VertexArray.h"
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
+#include <cstdint>
+#include "BufferLayout.h"
 
 namespace Render
 {
@@ -19,9 +16,11 @@ namespace Render
         void draw() const;
 
     private:
-        VertexArray m_VAO;
-        VertexBuffer m_VBO;
-        IndexBuffer m_IBO;
-    };
+        uint32_t m_VAO = 0;
+        uint32_t m_VBO = 0;
+        uint32_t m_IBO = 0;
 
-} // namespace Render
+        uint32_t m_VertexCount = 0;
+        uint32_t m_IndexCount  = 0;
+    };
+}

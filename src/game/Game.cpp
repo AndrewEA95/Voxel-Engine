@@ -10,6 +10,8 @@
 #include "../ecs/Hierarchy.h"
 #include "../ecs/Systems.h"
 
+#include <iostream>
+
 #include "../render/Raycast.h"
 #include "../../extern/glfw/include/GLFW/glfw3.h"
 #include <OpenGL/gl.h>
@@ -247,6 +249,8 @@ void Game::onRender(const Render::Camera& camera, float dt)
 {
     glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
+
+    std::cout << "Scene objects: " << m_Scene.getObjects().size() << "\n";
 
     // Draw world
     Render::Renderer::drawScene(m_Scene, camera.getViewProjectionMatrix(), m_selected);

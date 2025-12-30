@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"/Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/install_manifest.txt\"")
+if (NOT EXISTS "/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "/Users/andrewanglin/projects2/cmake_test/Game_engine/build/extern/glfw/install_manifest.txt" files)
+file(READ "/Users/andrewanglin/Projects2/cmake_test/Game_engine/build/extern/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

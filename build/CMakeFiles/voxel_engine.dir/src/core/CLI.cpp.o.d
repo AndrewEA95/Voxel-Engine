@@ -1,6 +1,6 @@
 CMakeFiles/voxel_engine.dir/src/core/CLI.cpp.o: \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/CLI.cpp \
-  /Users/andrewanglin/projects2/cmake_test/Game_engine/src/core/CLI.h \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/core/CLI.cpp \
+  /Users/andrewanglin/Projects2/cmake_test/Game_engine/src/core/CLI.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__config_site \

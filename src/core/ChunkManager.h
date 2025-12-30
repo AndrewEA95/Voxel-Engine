@@ -1,17 +1,14 @@
 #pragma once
+
+#include <cstdint>
 #include <unordered_map>
+#include <unordered_set>
+#include <queue>
+#include <thread>
+#include <atomic>
+
 #include "../voxel/Chunk.h"
 #include "../scene/Scene.h"
-
-struct ChunkCoord
-{
-    int x, y, z;
-
-    bool operator==(const ChunkCoord& other) const
-    {
-        return x == other.x && y == other.y && z == other.z;
-    }
-};
 
 struct ChunkCoordHash
 {
@@ -23,10 +20,27 @@ struct ChunkCoordHash
     }
 };
 
+struct ChunkBuildResult
+{
+    ChunkCoord coord;
+    Chunk chunk;
+    std::vector<float> vertices;
+    std::vector<uint32_t> indices;
+
+    ChunkBuildResult(const ChunkCoord& c,
+                     Chunk&& ch,
+                     std::vector<float>&& v,
+                     std::vector<uint32_t>&& i)
+        : coord(c), chunk(std::move(ch)),
+          vertices(std::move(v)), indices(std::move(i))
+    {}
+};
+
 class ChunkManager
 {
 public:
     ChunkManager(Scene& scene);
+    ~ChunkManager();
 
     void update(const glm::vec3& cameraPos);
 
@@ -35,7 +49,6 @@ public:
 
 private:
     Scene& m_scene;
-    ChunkCoord m_lastCenter = { 999999, 999999, 999999 };
 
     std::unordered_map<ChunkCoord, Chunk, ChunkCoordHash> m_chunks;
 
@@ -47,4 +60,25 @@ private:
     void unloadChunk(const ChunkCoord& coord);
 
     ChunkCoord worldToChunk(const glm::vec3& pos);
+
+    bool m_startupBurst = true;
+
+    std::vector<std::thread> m_workers;
+    bool m_shutdown = false;
+
+    std::mutex m_jobMutex;
+    std::condition_variable m_jobCv;
+    std::queue<ChunkCoord> m_jobs;
+
+    std::unordered_set<ChunkCoord> m_chunksInProgress;
+
+    std::mutex m_resultMutex;
+    std::queue<ChunkBuildResult> m_results;
+
+    ChunkCoord m_lastCenter{};
+    bool m_hasLastCenter = false;
+
+    void workerThread(); // same name, new behavior
+
+    void pumpResults();
 };

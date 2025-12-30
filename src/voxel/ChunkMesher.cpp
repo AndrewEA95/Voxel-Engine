@@ -225,3 +225,43 @@ Render::RenderObject ChunkMesher::buildMesh(const Chunk& chunk,
 
     return obj;
 }
+
+void ChunkMesher::buildMeshRaw(const Chunk& chunk,
+                               const ChunkManager& manager,
+                               std::vector<float>& outVertices,
+                               std::vector<uint32_t>& outIndices)
+{
+    (void)manager;
+
+    outVertices.clear();
+    outIndices.clear();
+
+    outVertices.reserve(10000);
+    outIndices.reserve(20000);
+
+    greedyMeshDirection(chunk, outVertices, outIndices, +1, 0, 0);
+    greedyMeshDirection(chunk, outVertices, outIndices, -1, 0, 0);
+    greedyMeshDirection(chunk, outVertices, outIndices,  0, +1, 0);
+    greedyMeshDirection(chunk, outVertices, outIndices,  0, -1, 0);
+    greedyMeshDirection(chunk, outVertices, outIndices,  0, 0, +1);
+    greedyMeshDirection(chunk, outVertices, outIndices,  0, 0, -1);
+}
+
+Render::RenderObject ChunkMesher::buildMeshFromRaw(
+    const Chunk& chunk,
+    const std::vector<float>& vertices,
+    const std::vector<uint32_t>& indices)
+{
+    Render::BufferLayout layout = {
+        { Render::ShaderDataType::Float3, "a_Position" },
+        { Render::ShaderDataType::Float3, "a_Color" }
+    };
+
+    Render::Mesh* mesh = new Render::Mesh(vertices, indices, layout);
+
+    Render::RenderObject obj(mesh, glm::vec3(0.6f, 0.8f, 0.9f));
+    obj.transform.setPosition(chunk.getWorldPosition());
+    obj.isStatic = true;
+
+    return obj;
+}

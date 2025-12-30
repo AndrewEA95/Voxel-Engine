@@ -3,6 +3,36 @@
 #include "Voxel.h"
 #include"../../extern/glm-1.0.2/glm/glm.hpp"
 
+struct ChunkCoord
+{
+    int x, y, z;
+
+    bool operator==(const ChunkCoord& other) const
+    {
+        return x == other.x && y == other.y && z == other.z;
+    }
+
+    bool operator!=(const ChunkCoord& other) const
+    {
+        return !(*this == other);
+    }
+};
+
+namespace std
+{
+    template<>
+    struct hash<ChunkCoord>
+    {
+        size_t operator()(const ChunkCoord& c) const noexcept
+        {
+            size_t h1 = std::hash<int>()(c.x);
+            size_t h2 = std::hash<int>()(c.y);
+            size_t h3 = std::hash<int>()(c.z);
+            return h1 ^ (h2 << 1) ^ (h3 << 2);
+        }
+    };
+}
+
 class Chunk
 {
     public:
